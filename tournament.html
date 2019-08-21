@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>トーナメント表｜第45回社会人野球日本選手権大会｜NTT西日本</title>
+<meta name="keywords" content="NTT西日本,日本選手権,試合日程,トーナメント" />
+<meta name="description" content="第45回社会人野球日本選手権大会のトーナメント表です。" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="第45回社会人野球日本選手権大会" />
+<meta property="og:description" content="第45回社会人野球日本選手権大会のトーナメント表です。" />
+<meta property="og:url" content="http://www.ntt-west.co.jp/symbol/hp/baseball/games/2015/city/" />
+<meta property="og:site_name" content="第45回社会人野球日本選手権大会" />
+<meta property="og:country-name" content="Japan,日本" />
+<meta property="og:locality" content="Osaka,大阪" />
+<meta property="og:image" content="http://www.ntt-west.co.jp/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" href="http://www.ntt-west.co.jp/symbol/hp/baseball/games/2019/japan/icon.gif" />
+<link rel="stylesheet" href="css/import.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery.bracket.min.css" />
+</head>
+<body>
+<!--#include virtual="templates/header-nav.inc"-->
+    <h3><span class="fa fa-sitemap"></span>Tournament Bracket</h3>
+    <p>トーナメント表</p>
+  </header>
+  <div id="minimal"></div>
+</main>
+<!--#include virtual="templates/footer.inc"--> 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> 
+<script type="text/javascript" src="js/jquery.bracket.min.js"></script> 
+<script type="text/javascript">
+	var minimalData = {
+		teams : [
+			["大阪ガス", "Team"],
+			["JFE東日本", "Team"],
+			["Honda熊本", "Team"],
+			["明治安田生命", "Team"],
+			["王子", "Team"],
+			["日本製鉄鹿島", "Team"],
+			["東邦ガス", "Team"],
+			["きらやか銀行", "パナソニック"],
+			["Honda鈴鹿", "Team"],
+			["鷺宮製作所", "Team"],
+			["日本製鉄広畑", "Team"],
+			["JFE西日本", "Team"],
+			["JR東日本東北", "Team"],
+			["信越硬式野球クラブ", "Team"],
+			["東芝", "Team"],
+			["JR東海", "日本通運"],
+			["七十七銀行", "ヤマハ"],
+			["JR東日本", "Team"],
+			["NTT西日本", "Team"],
+			["JR九州", "Team"],
+			["日本製鉄室蘭ｼｬｰｸｽ", "Team"],
+			["日立製作所", "Team"],
+			["JR四国", "Team"],
+			["三菱重工神戸・高砂", "Team"],
+			["宮崎梅田学園", "シティライト岡山"],
+			["日本生命", "Team"],
+			["NTT東日本", "Team"],
+			["日本新薬", "Team"],
+			["三菱自動車岡崎", "Team"],
+			["Honda", "Team"],
+			["三菱日立ﾊﾟﾜｰｼｽﾃﾑｽﾞ", "Team"],
+			["トヨタ自動車", "Team"]
+		],
+		results : [
+			[
+				[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[0,1],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[2,1],[1,2],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[3,4],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0]
+			],[
+				[2,3],[0,2],[4,5],[1,2],[1,5],[2,5],[7,1],[3,1],[1,7],[4,2],[0,2],[4,9],[2,10],[2,1],[5,2],[4,6]
+			],[
+				[6,2],[0,2],[4,8],[2,3],[3,6],[1,0],[2,1],[2,5]
+			],[
+				[3,1],[1,10],[2,3],[4,5]
+			],[
+			 	[5,4],[4,5]
+			],[
+				[6,4]
+			]
+		]
+	}
+    
+	$(function() {
+        $('div#minimal').bracket({
+          init: minimalData,
+		  skipConsolationRound: true
+		});
+		
+		$('div.jQBracket .round:nth-child(1) .match:nth-child(8),div.jQBracket .round:nth-child(1) .match:nth-child(16),div.jQBracket .round:nth-child(1) .match:nth-child(17),div.jQBracket .round:nth-child(1) .match:nth-child(25)').addClass('first');
+		
+		$('div.jQBracket .round:nth-child(1) .match:not(.first)').css({'margin-left':'-9999px','float':'none'});
+		
+		$('div.jQBracket .round:nth-child(2) .match:nth-child(10) .team:nth-child(1) , div.jQBracket .round:nth-child(3) .match:nth-child(5) .team:nth-child(2) , div.jQBracket .round:nth-child(4) .match:nth-child(3) .team:nth-child(1)').addClass('west');	
+		
+		$('div.jQBracket .round:nth-child(2) .match:nth-child(14) .team:nth-child(1) , div.jQBracket .round:nth-child(3) .match:nth-child(7) .team:nth-child(2)').addClass('east');
+	});
+</script> 
+<script type="text/javascript" src="js/common.js"></script> 
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+</body>
+</html>
