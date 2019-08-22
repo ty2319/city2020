@@ -1,0 +1,156 @@
+@import "settings";
+
+@keyframes bounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+ 
+  60% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+ 
+  100% {
+    transform: scale(1);
+  }
+}
+
+article {
+	overflow: hidden;
+  
+	.single {
+		display	 : flex !important;
+		flex-wrap: wrap-reverse !important;
+		
+		& > section {			
+			border	 : none !important;
+			position : $r;
+			width	 : $max;
+			
+			&:before {
+				@include abT(0,0,0);
+				content		: '';
+				height		: $max;
+				border-left : $navy solid 5px;
+			}
+			
+			h4 {
+				background-color: $navy;
+				color			: $white;
+				margin			: 0 0 2em -0.5em;
+				padding			: 1em;
+				text-align		: center;
+				max-width		: 15em;
+				transform		: skewX(-10deg);
+				box-shadow		: 3px 3px 3px rgba(0,0,0,0.3);
+			}
+	  
+			ul {
+				list-style		: none;
+				padding			: 0 0 0 2em;
+				display			: flex;
+				flex-flow		: row wrap;
+				
+				li {
+					visibility	 : hidden;
+					
+					&.show {
+						visibility	 : visible !important;
+						animation	 : bounce 0.6s;
+						margin-bottom: 3em;
+						position	 : $r;
+					
+						&:before {
+							@include abT(0,-0.9em,1);
+							content		: '';
+							width		: 0;
+							height		: 0;
+							border-top	: 1em solid $white;
+							border-left	: 1em solid transparent;
+						}
+					}
+				
+					h5 {
+						margin		: 0;
+						padding		: 1em 1em 0 1em;
+						box-shadow	: 7px 7px 7px rgba(0,0,0,0.3);
+	
+						&:before {
+							content: '【';
+						}
+						
+						&:after {
+							content: '】';
+						}
+					}
+					
+					p {
+						padding		: 1em;
+						font-weight : bold;
+						box-shadow	: 7px 7px 7px rgba(0,0,0,0.3);
+						
+						i {
+							color: $navy;
+						}
+						
+						.fa-circle {
+							color: $navy;
+						}
+						
+						.fa-inverse {
+							color: #C93;
+						}
+					}
+					  
+					h5 , p {
+						background-color: $white;
+					}
+					
+					a:after {
+						content: ' ≫';
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 40em) {
+	.contents {
+		margin: 0 auto;
+		
+		& > section:before {
+			left: $max / 2 !important;
+		}
+		
+		h4 {
+			margin: 0 auto 2em auto !important;
+		}
+		
+		ul {
+			padding-left	: 0;
+			justify-content : space-between;
+		
+			.show {
+				width			: $max * 0.46;
+				margin-top  	: 2em;
+				text-align		: center;
+			
+				&:nth-of-type(odd) {
+					
+					&:before {
+						border-top	: 1em solid $white;
+						border-right: 1em solid transparent;
+						right: -1em;
+						left: auto;
+					}
+				}
+				
+				&:nth-of-type(even) {
+					margin: 7em 0 0 -2em;
+				}
+			}
+		}
+	}
+}

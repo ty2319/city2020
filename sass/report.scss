@@ -1,0 +1,138 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import "settings";
+	
+article {
+
+	& > .contents {
+		position: $r;
+		z-index : 1;
+		
+		& > div {
+			width	: $max;
+			position: $r;
+			overflow: hidden;
+			padding	: 0 $max*0.03 !important;
+			display : block;
+			
+			& > * {
+				width	: $max / 2 !important;
+				height	: $max;
+				margin	: 0 !important;
+				padding	: 0 !important;
+				overflow-y: auto !important;
+				
+				@include media($six) {
+					width: $max !important;
+				}
+			}
+	
+			& > img {
+				height: auto;
+				
+				&:not(.left):not(.right) {
+					width : $max * 0.53 !important;
+					margin-left: -$max * 0.03 !important;
+					
+					@include media($six) {
+						width		: $max !important;
+						margin-left : 0 !important;
+					}
+				}
+			}
+			
+			&> section {
+				padding			: $max*0.03 !important;
+				background-color: $white !important;
+				
+				@include media($six) {
+					height: auto !important;
+				}
+			}
+						
+			&> .left {
+				@include abT(0,100%,1);
+				
+				@include media($six) {
+					position: static;
+					width	: $max;
+				}
+			}
+			
+			&> .right {
+				@include abT(0,50%,0);
+				display : none;
+				
+				@include media($six) {
+					position: static;
+					width	: $max;
+					display	: block;
+				}
+				
+				&> img {
+					padding: 0 !important;
+				}
+			}
+			
+			h5 {
+				padding		 : 1em;
+				color		 : $navy;
+				border-top	 : $navy 3px double;
+				border-bottom: $navy 3px double;
+			}
+			
+			p {
+				margin-top: 1em;
+				
+				&:last-of-type {
+					margin-bottom: 4em;
+				}
+			}
+			
+			a button {
+				display			: block;
+				text-decoration : none;
+				background-color: $blue;
+				margin-bottom	: 2em;
+				padding			: 0.5em;
+				text-align		: center;
+				color			: $white;
+				overflow		: hidden;
+				width			: $max;
+				cursor			: pointer;
+				border			: none;
+	
+				&:hover {
+					opacity: 0.8;
+				}
+			}
+		}
+
+		ul {
+			display			: table;
+			background-color: lighten($modal , 10%);
+			text-align		: center;
+			margin			: -3.7em auto 5em auto;
+			padding			: 0 !important;
+			position		: $r;
+			z-index			: 1;
+			
+			li {
+				display		: table-cell;
+				padding		: 1em 1.5em;
+				font-weight	: bold;
+					
+				&.show {
+					a {
+						color: $blue;
+					}
+				}
+				
+				a {
+					color: $white;
+				}
+			}
+		}
+	}
+}

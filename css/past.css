@@ -1,0 +1,157 @@
+@charset "UTF-8";
+@keyframes bounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* line 19, ../sass/past.scss */
+article {
+  overflow: hidden;
+}
+/* line 22, ../sass/past.scss */
+article .single {
+  display: flex !important;
+  flex-wrap: wrap-reverse !important;
+}
+/* line 26, ../sass/past.scss */
+article .single > section {
+  border: none !important;
+  position: relative;
+  width: 100%;
+}
+/* line 31, ../sass/past.scss */
+article .single > section:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  content: '';
+  height: 100%;
+  border-left: #012052 solid 5px;
+}
+/* line 38, ../sass/past.scss */
+article .single > section h4 {
+  background-color: #012052;
+  color: #fff;
+  margin: 0 0 2em -0.5em;
+  padding: 1em;
+  text-align: center;
+  max-width: 15em;
+  transform: skewX(-10deg);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+/* line 49, ../sass/past.scss */
+article .single > section ul {
+  list-style: none;
+  padding: 0 0 0 2em;
+  display: flex;
+  flex-flow: row wrap;
+}
+/* line 55, ../sass/past.scss */
+article .single > section ul li {
+  visibility: hidden;
+}
+/* line 58, ../sass/past.scss */
+article .single > section ul li.show {
+  visibility: visible !important;
+  animation: bounce 0.6s;
+  margin-bottom: 3em;
+  position: relative;
+}
+/* line 64, ../sass/past.scss */
+article .single > section ul li.show:before {
+  position: absolute;
+  top: 0;
+  left: -0.9em;
+  z-index: 1;
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 1em solid #fff;
+  border-left: 1em solid transparent;
+}
+/* line 74, ../sass/past.scss */
+article .single > section ul li h5 {
+  margin: 0;
+  padding: 1em 1em 0 1em;
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
+}
+/* line 79, ../sass/past.scss */
+article .single > section ul li h5:before {
+  content: '【';
+}
+/* line 83, ../sass/past.scss */
+article .single > section ul li h5:after {
+  content: '】';
+}
+/* line 88, ../sass/past.scss */
+article .single > section ul li p {
+  padding: 1em;
+  font-weight: bold;
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
+}
+/* line 93, ../sass/past.scss */
+article .single > section ul li p i {
+  color: #012052;
+}
+/* line 97, ../sass/past.scss */
+article .single > section ul li p .fa-circle {
+  color: #012052;
+}
+/* line 101, ../sass/past.scss */
+article .single > section ul li p .fa-inverse {
+  color: #C93;
+}
+/* line 106, ../sass/past.scss */
+article .single > section ul li h5, article .single > section ul li p {
+  background-color: #fff;
+}
+/* line 110, ../sass/past.scss */
+article .single > section ul li a:after {
+  content: ' ≫';
+}
+
+@media screen and (min-width: 40em) {
+  /* line 120, ../sass/past.scss */
+  .contents {
+    margin: 0 auto;
+  }
+  /* line 123, ../sass/past.scss */
+  .contents > section:before {
+    left: 50% !important;
+  }
+  /* line 127, ../sass/past.scss */
+  .contents h4 {
+    margin: 0 auto 2em auto !important;
+  }
+  /* line 131, ../sass/past.scss */
+  .contents ul {
+    padding-left: 0;
+    justify-content: space-between;
+  }
+  /* line 135, ../sass/past.scss */
+  .contents ul .show {
+    width: 46%;
+    margin-top: 2em;
+    text-align: center;
+  }
+  /* line 142, ../sass/past.scss */
+  .contents ul .show:nth-of-type(odd):before {
+    border-top: 1em solid #fff;
+    border-right: 1em solid transparent;
+    right: -1em;
+    left: auto;
+  }
+  /* line 150, ../sass/past.scss */
+  .contents ul .show:nth-of-type(even) {
+    margin: 7em 0 0 -2em;
+  }
+}

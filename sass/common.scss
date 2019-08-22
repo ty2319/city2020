@@ -1,0 +1,85 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import "settings";
+
+html {
+	font-size		 : 16px;
+	font-family		 :'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+	color			 : lighten($black, 20%);
+	background-color : $black;
+	
+	body {
+		line-height		: 1.75em;
+		position		: $r;
+		display			: grid;
+		display			: -ms-grid;
+		grid-template	: 4em auto 3em / 4% 36% 60%;
+		-ms-grid-rows	: 4em auto auto;
+		-ms-grid-columns: 4% 36% 60%;
+		
+		.menu_open {
+			pointer-events		 : none;
+			transition			 : all .2s ease-out;
+			-webkit-filter		 : blur(5px);
+				 -moz-filter	 : blur(5px);
+				  -ms-filter	 : blur(5px);
+					  filter	 : blur(5px);
+		}
+		
+		@include media($of) {
+			font-size		: 0.875rem;
+			grid-template	: auto 5em auto 3em / 30% 70%;
+			-ms-grid-rows	: auto 5em auto 3em;
+			-ms-grid-columns: 30% 70%;
+		}
+	
+		@include media($ot) {
+			font-size			 : 0.777rem;
+			grid-template		 : auto 4em auto 3em / 100%;
+			-ms-grid-rows		 : auto 4em auto 3em;
+			-ms-grid-columns	 : $max;
+			grid-template-columns: $max;
+			 -ms-grid-columns	 : $max;
+		}
+		
+		@include media($six) {
+			font-size: 0.6rem !important;
+		}
+
+		a {
+			color			: #0033cc;
+			text-decoration	: none;
+			
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	
+		img {
+			border: none;
+			line-height: 0;
+			vertical-align: bottom;
+		}
+	
+		#pagetop {
+			@include fixB(-50px,55px,15);
+			
+			@include media($six) {
+				@include fixB(-50px,10px,15);
+			}
+			
+			a {
+				display			: block;
+				width			: 50px;
+				height			: 50px;
+				background-color: rgba(1,32,82,0.7);
+				border-radius	: 50px;
+				text-align		: center;
+				color			: #fff;
+				font-size		: 24px;
+				line-height		: 50px;
+			}
+		}
+	}
+}

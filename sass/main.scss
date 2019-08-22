@@ -1,0 +1,518 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import "settings";
+
+@keyframes load {
+	0% {
+		transform: translateY(50px);
+		opacity: 0;
+	}
+	
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+main {
+	grid-area			: 2 / 2 / 4 / 4;
+	-ms-grid-row		: 2;
+	-ms-grid-row-span	: 2;
+	-ms-grid-column		: 2;
+	-ms-grid-column-span: 2;
+	display		 		: grid;
+	display				: -ms-grid;
+	grid-template		: auto / 37.5% 62.5%;
+	-ms-grid-rows		: auto;
+	-ms-grid-columns	: 37.5% 62.5%;
+	
+	@include media($of) {
+		grid-area			: 3 / 1 / 5 / 3;
+		-ms-grid-row		: 3;
+		-ms-grid-row-span	: 2;
+		-ms-grid-column		: 1;
+		-ms-grid-column-span: 2;
+		grid-template		: auto / 30% 70%;
+		-ms-grid-rows		: auto;
+		-ms-grid-columns	: 30% 70%;
+	}
+	
+	@include media($ot) {
+		grid-template		: 50em auto / $max;
+		-ms-grid-rows		: 50em auto;
+		-ms-grid-columns	: $max;
+		-ms-grid-row-span	: 1;
+		-ms-grid-column-span: 1;
+	}
+	
+	& > header {
+		grid-area			: 1 / 1 / 2 / 2;
+		-ms-grid-row		: 1;
+		-ms-grid-column		: 1;
+ 		font-family 		: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
+		color				: $white;
+		background-size		: cover;
+		background-position	: 50% 50%;
+		background-repeat	: none;
+		z-index				: 0;
+		position 			: $r;
+		
+		@for $value from 1 through 12 {
+				
+			&.bg#{$value} {
+			
+				@if $value < 10 {
+					background-image :  url(#{$ip}common/0#{$value}.jpg);
+				} @else {
+					background-image : url(#{$ip}common/#{$value}.jpg);
+				}
+			} 
+		}
+		
+		&.fix {
+			@include fixT(0,4%,0);
+			width : 36%;
+			height: $max;
+			
+			@include media($of) {
+				top	 : 5em;
+				left : 0;
+				width: 30%;
+			}
+			
+			@include media($ot) {
+				top	 : 4em;
+				width: $max;
+			}
+		}
+
+		h2 {
+			@include abT(28%,50%,0);
+			margin: -115px 0 0 -125px;		
+			
+			@include media($of) {
+				@include abT(23%,50%,0);
+			}		
+			
+			@include media($ot) {
+				@include abT(30%,50%,0);
+			}
+			
+			@include media($six) {
+				margin: -50px 0 0 -75px;
+			}
+			
+			img {
+				width	 : 250px;
+				height	 : auto;
+			
+				@include media($six) {
+					width: 150px;
+				}
+			}
+		}
+		
+		h3 {
+			text-align	: center;
+			font-size	: 3em;
+			line-height	: 1.15em;
+			font-weight : normal;
+			text-shadow : -1px -1px 3px $black, 1px 1px 3px $black;
+			margin-top	: 9em;
+			font-weight : bold;
+			
+			@include media($ot) {
+				margin-top	: 9.5em;
+			}
+			
+			span {
+				display	 	 : block !important;
+				font-size	 : 2.5em !important;
+				margin-bottom: 0.2em;
+			}
+		}
+	
+		p {
+			text-align	: center;
+			margin-top	: 1em;
+			font-size	: 2em;
+			font-weight : bold;
+			text-shadow	: -1px -1px 3px $black, 1px 1px 3px $black;
+			
+			@include media($six) {
+				font-size	 : 1.5em;
+				line-height	 : 1em; 
+				margin-bottom: 5em;
+			}
+			
+			&#scroll {
+				margin: 5em 0 0 3em;
+				cursor: pointer;
+			
+				@include media($six) {
+					display: none;
+				}
+		
+				span {
+					display: block;
+					margin : -0.2em 0 0;
+				}
+			}
+		}
+	}
+	
+	& > article , & > div {
+		grid-area		: 1 / 2 / 2 / 3;
+		-ms-grid-row	: 1;
+		-ms-grid-column	: 2;
+		z-index			: 1;
+		
+		@include media($ot) {
+			grid-area		: 2 / 1 / 3 / 2;
+			-ms-grid-row	: 2;
+			-ms-grid-column	: 1;
+		}
+	
+		#pan {
+			@include fixB(0,0,1);
+			display			: none;
+			padding			: 0.5em;
+			width			: $max;
+			color			: $white;
+			background-color: $modal;
+		}
+		
+		@include media($fh) {
+			a {
+				position: $r;
+				z-index	: 5;
+			}
+		}
+		
+		.single {
+			display: block;
+			padding: 0 $max*0.03 5em $max*0.03;
+			
+			& > *:not(header) {
+				padding-top: 2em;
+			}
+		
+			img {
+				display		: block;
+				width		: $max;
+				height		: auto;
+				margin-top	: 1em;
+			}
+		}
+			
+		.half {
+			display			: flex;
+			flex-flow		: row wrap;
+			justify-content : space-between;
+			padding-bottom	: 5em;
+			
+			& > *:not(header) {
+				width		: $max / 2 !important;
+				border-top	: none;
+				padding		: 2em $max*0.03 !important;
+			
+				&:nth-of-type(even) {
+					border-left : 1px dotted lighten($black,50%);
+				}
+			
+				@include media($six) {
+					width: $max !important;
+					
+					&:not(dl) {
+						border-left: none !important;
+				
+						&:nth-of-type(odd) {
+							border-top : none;
+						}
+					}
+				}
+			
+				img {
+					display		: block;
+					width		: $max;
+					height		: auto;
+					margin-top	: 1em;
+				}
+		
+				dl,ul,p,table {
+					margin: 1em 0;
+				}
+			}
+		}
+			
+		.one_third {
+			display			: flex;
+			flex-flow		: row wrap;
+			justify-content : space-between;
+			padding-bottom	: 5em;
+
+			
+			& > *:not(header) {
+				width		 : $max / 3 !important;
+				border-top	 : none;
+				border-bottom: none;
+				padding		 : 2em $max*0.03;
+			
+				&:nth-of-type(3n-1) {
+					border-left	 : lighten($black,50%) dotted 1px;
+					border-right : lighten($black,50%) dotted 1px;	
+								
+					@include media($six) {
+						border-left		: none;
+						border-right	: none;
+						border-top		: lighten($black,50%) solid 1px;
+						border-bottom	: lighten($black,50%) solid 1px;
+					}
+				}
+			
+				@include media($six) {
+					width: $max !important;
+				}
+				
+				h5 {
+					margin-top: 5em !important;
+				}
+				
+				p {
+					margin-bottom: 2em;
+				}
+				
+				img {
+					width: $max;
+					height: auto;
+				}
+			}
+		}
+		
+		.quarter {
+			display			: flex;
+			flex-flow		: row wrap;
+			justify-content : space-between;
+			padding			: 0 $max*0.03 7em $max*0.03;
+			
+			& > *:not(header) {
+				width	: $max / 2 !important;
+				padding : 1em !important;
+				border	: none !important;
+				
+				&:nth-of-type(4n-1),&:nth-of-type(4n-2) {
+					background-color: lighten($modal,80%);
+				}
+				
+				&:nth-of-type(4n),&:nth-of-type(4n-3) {
+					background-color: lighten($modal2,80%);
+				}
+				
+				@include media($ot) {
+					width	: $max / 4 !important;
+				
+					&:nth-of-type(8n-1),&:nth-of-type(8n-3),&:nth-of-type(8n-4),&:nth-of-type(8n-6) {
+						background-color: lighten($modal,80%);
+					}
+					
+					&:nth-of-type(8n),&:nth-of-type(8n-2),&:nth-of-type(8n-5),&:nth-of-type(8n-7) {
+						background-color: lighten($modal2,80%);
+					}
+				}
+				
+				@include media($nf) {
+					width: $max / 2 !important;
+				
+					&:nth-of-type(4n-1),&:nth-of-type(4n-2) {
+						background-color: lighten($modal,80%);
+					}
+					
+					&:nth-of-type(4n),&:nth-of-type(4n-3) {
+						background-color: lighten($modal2,80%);
+					}
+				}
+			
+				@include media($six) {
+					width: $max !important;
+				
+					&:nth-of-type(even) {
+						background-color: lighten($modal,80%);
+					}
+					
+					&:nth-of-type(odd) {
+						background-color: lighten($modal2,80%);
+					}
+				}
+			
+				dl,p {
+					margin: 1em !important;
+				}
+				
+				img {
+					width: $max;
+					height: auto;
+					padding: 0 1em;
+				}
+			}
+		}
+		
+		.center {
+			text-align	: center;
+			margin		: 2em $max*0.03;
+		}
+	}
+	
+	.contents {
+		width			: $max;
+		background		: center top no-repeat fixed;
+		overflow		: hidden;
+		background-size : cover;
+		
+		@for $value from 1 through 8 {
+			
+			&.bg#{$value} {
+				background-image: url(#{$ip}common/0#{$value}.png);
+			}
+		}
+		
+		header {
+			text-align	: center;
+			margin		: 7em 0;
+			color		: $navy;
+			width		: $max;
+  			font-family : "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
+			
+			h4 {
+				font-size	: 2em;
+				line-height : $max;
+				font-weight : bold;
+			}
+			
+			p {
+				margin 		: 0.5em 0 0 !important;
+				font-weight : bold;
+			}
+		}
+		
+		hr {
+			display		 : block;
+			border-top	 : 1px dotted lighten($black,50%);
+			margin-bottom: 4em;
+		}
+		
+		& > section, & > div {
+			
+			& > div {
+				display		: flex;
+				flex-flow	: row nowrap;
+				margin		: 1em 0;
+					
+				@include media($six) {
+					flex-flow: row wrap;
+					
+					dl {
+						margin-top: 1em !important;
+					}
+				}
+			}
+			
+			table {
+				border-collapse : collapse;
+				border			: lighten($black,70%) solid 1px;
+				padding			: 0;
+				width			: $max;
+	
+				&.border {
+					caption {
+						color: lighten($black,40%) !important;
+					}
+				}
+			}
+		}
+	
+		.back_gray,.back_gray th,.back_gray td {
+			background-color: lighten($modal,80%);
+		}
+	
+		.back_white,.back_white th,.back_white td {
+			background-color: lighten($modal2,80%);
+		}
+		
+		figure {
+			 font-size: 0.8rem;
+			 line-height: 1rem;
+			 margin-bottom: 3rem;
+			 text-align: center;
+			 
+			 figcaption {
+				 margin-top: 0.5rem;
+			}
+		}
+				
+		h5,caption {
+			color		 : $navy;
+			margin-bottom: 1em;
+			padding		 : 0.5em;
+			font-size	 : 1.25em;
+			text-align	 : center;
+		}
+		
+		dl,.frame,.box {
+			padding: 1em;
+			border: #999 3px double !important;
+			overflow: hidden;
+			zoom: 1;
+			background-color: $modal2;
+			margin: 0.5em;
+		}
+						
+		dt {
+			color: $navy;
+			font-weight: bold;
+			clear: both;
+			text-align: center;
+			margin-top: 2em;
+			
+			&:first-child {
+				margin: 0;
+			}
+		}
+			
+		dd {
+			overflow: hidden;
+			text-align: center;
+			
+			a {
+				color: $blue;
+				
+				span {
+					margin-right: 0.5em;
+				}
+			}
+		}
+		
+		.box {
+			margin: 3em 0 !important;
+			
+			dt {
+				float		: left;
+				margin-top	: 0;
+				width		: 7em;
+				text-align	: right;
+			}
+		
+			dd {
+				text-align		: left;
+				margin			: 0 0 0.5em 0;
+				border-bottom	: #666 1px dotted;
+				padding-left	: 7em;
+				overflow		: visible;
+			
+				&:last-of-type {
+					border: none;
+				}
+			}
+		}
+	}
+}

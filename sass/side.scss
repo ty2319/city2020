@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import "settings";
+
+#side {
+	@include fixB(35%,0.5rem,10);
+	text-align	: right;
+	font-size	: 0.9rem;
+		
+		li {
+			list-style : none;
+			line-height: 1.5rem;
+			
+			 a {
+				color			: $white;
+				text-decoration	: none;
+				cursor			: pointer;
+	
+				span {
+					display: none;
+				}
+			 }
+		}
+		
+	.on,.on a {
+		color: $blue;
+	}
+	
+	@include media($fh) {
+		display: none !important;
+	}
+}
+
+#modal {
+	@include fixT(0,0,9);
+	width			: $max;
+	height			: $max;
+	background-color: $modal;
+}

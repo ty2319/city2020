@@ -1,0 +1,225 @@
+//width&height ------------------
+
+$max: 100%;
+
+$fh: 500px;
+
+$six: 600px;
+
+$nf: 940px;
+
+$ot: 1200px;
+
+$of: 1500px;
+
+$FS: 12px;
+
+//-------------------------------
+
+
+
+//color -------------------------
+
+$white: #fff;
+
+$black: #000;
+
+$navy: #012052;
+
+$blue: #2c7eff;
+
+//-------------------------------
+
+
+//background ------------------------------------------------------------
+
+$modal: rgba(#000,0.8);
+
+@mixin Modal {
+	background-color: $modal;
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#88000000,EndColorStr=#88000000);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#88000000,EndColorStr=#88000000)";
+}
+
+$modal2: rgba(#FFF,0.4);
+
+@mixin Modal2 {
+	background-color: $modal2;
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#55FFFFFF,EndColorStr=#55FFFFFF);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#55FFFFFF,EndColorStr=#55FFFFFF)";
+}
+
+$modal3: rgba(#2c7eff,0.9);
+
+@mixin Modal3 {
+	background-color: $modal3;
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#222c7eff,EndColorStr=#222c7eff);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#222c7eff,EndColorStr=#222c7eff)";
+}
+
+$modal4: rgba(#012052,0.8);
+
+@mixin Modal4 {
+	background-color: $modal4;
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#77012052,EndColorStr=#77012052);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#77012052,EndColorStr=#77012052)";
+}
+
+//-----------------------------------------------------------------------
+
+
+
+//position -------------------------
+
+@mixin abT($top,$left,$z) {
+	position: absolute;
+	top: $top;
+	left: $left;
+	z-index: $z;
+}
+
+@mixin abB($bottom,$right,$z) {
+	position: absolute;
+	bottom: $bottom;
+	right: $right;
+	z-index: $z;
+}
+
+@mixin abR($top,$right,$z) {
+	position: absolute;
+	top: $top;
+	right: $right;
+	z-index: $z;
+}
+
+@mixin fixT($top,$left,$z) {
+	position: fixed;
+	top: $top;
+	left: $left;
+	z-index: $z;
+}
+
+@mixin fixB($bottom,$right,$z) {
+	position: fixed;
+	bottom: $bottom;
+	right: $right;
+	z-index: $z;
+}
+
+@mixin fixLB($bottom,$left,$z) {
+	position: fixed;
+	bottom: $bottom;
+	left: $left;
+	z-index: $z;
+}
+
+$r: relative;
+
+//---------------------------------
+
+
+
+//img path ------------------------
+
+$ip: '../img/';
+
+//---------------------------------
+
+
+
+//navigation ----------------------------------------
+
+%fix {
+	position: fixed;
+	top: 55%;
+	left: 0;
+}
+
+@mixin nvh {
+	@extend %fix;
+	z-index: 4;
+	color: $white;
+	cursor: pointer;
+	text-align: center;
+	background-color: lighten($modal,10%);
+	margin-left: $FS;
+	padding: $FS/2 0;
+	font-family: century;
+	font-size: $FS * 1.25;
+	width: $FS * 5;
+	text-align: center;
+}
+
+	@mixin hi {
+		display: block !important;
+		font-size: $FS * 2.5 !important;
+		color: $white;
+	}
+	
+@mixin nv {
+	@extend %fix;
+	z-index: 4;
+	width: $max;
+	height: 18rem;
+	margin: -7rem 0 0 0;
+	padding: 1.25rem 0;
+	display: none;
+	background-color: $black;
+}
+
+	@mixin nvli {
+		color: lighten($black, 40%);
+		line-height: $max;
+		margin-bottom: 1rem;
+	}
+	
+	@mixin nva {
+		color: $white;
+		&.active {
+			color: $blue;
+			text-decoration: line-through;
+		}
+		&:hover {
+			color: lighten($blue, 20%);
+		}
+	}
+
+//----------------------------------------------------
+
+//media query ---------------------
+ 
+@mixin media($mediaSize) {
+  @if $mediaSize <= $fh{
+    @media all and (max-width: $fh) {
+      @content
+    }
+  }
+  
+  @else if $mediaSize <= $six{
+    @media all and (max-width: $six) {
+      @content
+    }
+  }
+  
+  @else if $mediaSize <= $nf{
+    @media all and (max-width: $nf) {
+      @content
+    }
+  }
+  
+  @else if $mediaSize <= $ot{
+    @media all and (max-width: $ot) {
+      @content
+    }
+  }
+  
+  @else if $mediaSize <= $of{
+    @media all and (max-width: $of) {
+      @content
+    }
+  }
+  
+}
+
+//---------------------------------
+	

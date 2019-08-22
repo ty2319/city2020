@@ -1,0 +1,50 @@
+﻿[
+    {
+    "class": "index",
+    "date" : "2019-07-23"
+  },
+  {
+    "class": "tournament",
+    "date" : "2019-07-26"
+  },
+  {
+    "class": "results",
+    "date" : "2019-07-23"
+  },
+  {
+    "class": "gallery",
+    "date" : "2019-07-24"
+  },
+  {
+    "class": "aid",
+    "date" : "2019-06-24"
+  },
+  {
+    "class": "access",
+    "date" : "2019-06-17"
+  },
+  {
+    "class": "addition",
+    "date" : "2018-06-25"
+  },
+  {
+    "class": "mascot",
+    "date" : "2019-07-29"
+  },
+  {
+    "class": "hero",
+    "date" : "2019-07-21"
+  },
+  {
+    "class": "history",
+    "date" : "2019-06-17"
+  },
+  {
+    "class": "past",
+    "date" : "2019-06-17"
+  },
+  {
+    "class": "scoreboard",
+    "date" : "2019-07-23"
+  }
+]

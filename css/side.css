@@ -1,0 +1,46 @@
+/* CSS Document */
+/* line 6, ../sass/side.scss */
+#side {
+  position: fixed;
+  bottom: 35%;
+  right: 0.5rem;
+  z-index: 10;
+  text-align: right;
+  font-size: 0.9rem;
+}
+/* line 11, ../sass/side.scss */
+#side li {
+  list-style: none;
+  line-height: 1.5rem;
+}
+/* line 15, ../sass/side.scss */
+#side li a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* line 20, ../sass/side.scss */
+#side li a span {
+  display: none;
+}
+/* line 26, ../sass/side.scss */
+#side .on, #side .on a {
+  color: #2c7eff;
+}
+@media all and (max-width: 500px) {
+  /* line 6, ../sass/side.scss */
+  #side {
+    display: none !important;
+  }
+}
+
+/* line 35, ../sass/side.scss */
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
