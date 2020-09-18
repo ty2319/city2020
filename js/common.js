@@ -196,13 +196,13 @@
 			var links	= $(this);
 			var href	= links.attr('href');
 			
-			if(href.match('city') && href.match(loc)) {
+			if(href.match('japan') && href.match(loc)) {
 				$(this).addClass('active');
 			}
 		});
  
 		//JSONファイルを取得
-		$.getJSON('/symbol/hp/baseball/games/2019/city/js/update.json').done(function(json, status, request) {
+		$.getJSON('/symbol/hp/baseball/games/2019/japan/js/update.json').done(function(json, status, request) {
 			
 			var cnt = 0;
 			

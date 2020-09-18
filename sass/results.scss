@@ -171,18 +171,6 @@
 			font-size: 1.25em;
 		}
 		
-		thead th {
-			background-color: lighten($modal,30%);
-			color: $white;
-		}
-	
-		th,td {
-			border-right: lighten($black,70%) dotted 1px;
-			padding		: 0.7em 0.5em;
-			text-align	: center;
-			width		: auto;
-		}
-		
 		&.battery {
 			border			: none;
 			width			: auto;

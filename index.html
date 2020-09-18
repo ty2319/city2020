@@ -3,7 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script src="https://cdn.jsdelivr.net/npm/viewport-extra@1.0.3/dist/viewport-extra.min.js"></script> 
+<script>
+	new ViewportExtra(370)
+</script>
 <title>第45回社会人野球日本選手権大会｜NTT西日本</title>
 <meta name="keywords" content="NTT西日本,日本選手権,大阪市,近畿,シンボル,野球部,速報,スコアボード,日程,トーナメント,京セラドーム大阪" />
 <meta name="description" content="5年連続30回目の出場となるNTT西日本の初戦は、7月19日（金）10：00からJR九州と対戦します。 応援よろしくお願いいたします。" />
@@ -17,89 +21,72 @@
 <meta property="og:image" content="http://www.ntt-west.co.jp/favicon.ico" />
 <link rel="apple-touch-icon-precomposed" href="http://www.ntt-west.co.jp/symbol/hp/baseball/games/2019/japan/icon.gif" />
 <link rel="stylesheet" href="css/import.css" />
-<link rel="stylesheet" href="css/top.css">
+<link rel="stylesheet" href="css/top.css" />
 </head>
 <body>
 <!--#include virtual="templates/header-nav.inc"-->
-    <ul>
-      <li><img src="img/top/hamasaki.jpg" alt="浜崎 浩大"></li>
-      <li><img src="img/top/ohe.jpg" alt="大江 克哉"></li>
-      <li><img src="img/top/hagihara.jpg" alt="萩原 僚麻"></li>
-      <li><img src="img/top/yoshimoto.jpg" alt="吉元 一彦"></li>
-      <li><img src="img/top/yamada.jpg" alt="山田 峻士"></li>
-      <li><img src="img/top/tsujimoto.jpg" alt="辻本 勇樹"></li>
-      <li><img src="img/top/hadano.jpg" alt="波多野 利彦"></li>
-      <li><img src="img/top/matsuda.jpg" alt="松田 拓磨"></li>
-      <li><img src="img/top/kawazu.jpg" alt="河津 颯太"></li>
-      <li><img src="img/top/takuwa.jpg" alt="宅和 健太郎"></li>
-      <li><img src="img/top/yoshikawa.jpg" alt="吉川 侑輝"></li>
-      <li><img src="img/top/ishiyama.jpg" alt="石山 励雄"></li>
-      <li><img src="img/top/umetsu.jpg" alt="梅津 正隆"></li>
-      <li><img src="img/top/itoh.jpg" alt="伊東 嵩基"></li>
-      <li><img src="img/top/sakai.jpg" alt="酒井 良樹"></li>
-      <li><img src="img/top/nakanishi.jpg" alt="中西 純平"></li>
-      <li><img src="img/top/nomura.jpg" alt="野村 勇"></li>
-      <li><img src="img/top/nakamura.jpg" alt="中村 篤人"></li>
-      <li><img src="img/top/nakai.jpg" alt="中井 諒"></li>
-      <li><img src="img/top/hamada.jpg" alt="濱田 祥伍"></li>
-      <li><img src="img/top/nagata.jpg" alt="長田 涼平"></li>
-      <li><img src="img/top/kusakabe.jpg" alt="日下部 光"></li>
-      <li><img src="img/top/kageyama.jpg" alt="景山 拓也"></li>
-    </ul>
+    <div id="fp_preview"><img src="img/top/ohe.jpg" alt="" class="fp_preview" style="display:none;"/>
+      <div class="fp_overlay"></div>
+    </div>
+    <div id="fp_loading" class="fp_loading"></div>
+    <div id="fp_next" class="fp_next"></div>
+    <div id="fp_prev" class="fp_prev"></div>
+    <div id="outer_container" class="slide">
+      <div id="thumbScroller">
+        <ul class="container">
+          <li class="content"><img src="img/top/hamasaki2.jpg" alt="img/top/hamasaki.jpg"></li>
+          <li class="content"><img src="img/top/ohe2.jpg" alt="img/top/ohe.jpg"></li>
+          <li class="content"><img src="img/top/yoshimoto2.jpg" alt="img/top/yoshimoto.jpg"></li>
+          <li class="content"><img src="img/top/hadano2.jpg" alt="img/top/hadano.jpg"></li>
+          <li class="content"><img src="img/top/kawazu2.jpg" alt="img/top/kawazu.jpg"></li>
+          <li class="content"><img src="img/top/takuwa2.jpg" alt="img/top/takuwa.jpg"></li>
+          <li class="content"><img src="img/top/tsujimoto2.jpg" alt="img/top/tsujimoto.jpg"></li>
+          <li class="content"><img src="img/top/yamada2.jpg" alt="img/top/yamada.jpg"></li>
+          <li class="content"><img src="img/top/nakai2.jpg" alt="img/top/nakai.jpg"></li>
+          <li class="content"><img src="img/top/hamada2.jpg" alt="img/top/hamada.jpg"></li>
+          <li class="content"><img src="img/top/nagata2.jpg" alt="img/top/nagata.jpg"></li>
+          <li class="content"><img src="img/top/ishiyama2.jpg" alt="img/top/ishiyama.jpg"></li>
+          <li class="content"><img src="img/top/sakai2.jpg" alt="img/top/sakai.jpg"></li>
+          <li class="content"><img src="img/top/nakanishi2.jpg" alt="img/top/nakanishi.jpg"></li>
+          <li class="content"><img src="img/top/nomura2.jpg" alt="img/top/nomura.jpg"></li>
+          <li class="content"><img src="img/top/nakamura2.jpg" alt="img/top/nakamura.jpg"></li>
+          <li class="content"><img src="img/top/kusakabe2.jpg" alt="img/top/kusakabe.jpg"></li>
+          <li class="content"><img src="img/top/kageyama2.jpg" alt="img/top/kageyama.jpg"></li>
+        </ul>
+      </div>
+    </div>
+    <div id="fp_thumbtoggle" class="fp_thumbtoggle fixedsticky">View Thumbs</div>
   </header>
   <div>
     <dl id="schedule">
       <dt>Schedule<br>
         <span>NTT西日本 試合日程</span></dt>
+      <dd><span>【1回戦】</span><br>
+        10.25  Fri<br>
+        18:00</dd>
       <dd><span>【2回戦】</span><br>
-        7.19  Fri<br>
-        10:00</dd>
-      <dd><span>【3回戦】</span><br>
-        7.21  Sun<br>
+        10.30  Wed<br>
         14:00</dd>
       <dd><span>【準々決勝】</span><br>
-        7.23 Tue<br>
-        14:00</dd>
+        11.2 Sat<br>
+        9:00</dd>
       <dd><span>【準決勝】</span><br>
-        7.24  Wed<br>
-        18:00</dd>
+        11.3  Sun<br>
+        13:00</dd>
       <dd><span>【決勝】</span><br>
-        7.25  Thu<br>
-        18:00</dd>
+        11.4  Mon<br>
+        15:00</dd>
     </dl>
     <article>
       <section>
-        <h3><a href="results.html"><img src="img/top/1st.png"></a></h3>
-        <!--<p id="timer">【2回戦】7/19（金）10：00～<br>
-          VS　JR九州</p>--> 
-        <!-- <p class="center" style="font-size: 3em; padding: 0; margin: 1em auto;">20時15分試合開始！</p>-->
-        <p>NTT西日本は1回表、相手エラーと濱田選手のヒットでノーアウト1、3塁のチャンスを作り、山田選手のタイムリーで1点を先制。その後、満塁押し出しと中村選手の犠牲フライでさらに2点を追加する。<br>
-          先発を託された大江投手は自慢の速球がこの日も冴えわたり、序盤3回をわずか1安打に抑えるナイスピッチングを披露！<br>
-          4回裏に2点を返されるものの、5回表にすぐさま山田選手がレフトスタンドにソロホームランを放り込み、リードを再び広げる。<br>
-          6回途中からは宅和投手、河津投手、吉元投手と小刻みな投手リレーで相手打線を翻弄。4対2で勝利を収め、次戦にコマを進めた。</p>
-        <ol>
-          <li><a href="results.html">
-            <button type="button"><span class="fa fa-list-ol"></span> 試合結果はこちら</button>
-            </a></li>
-          <li><a href="hero.html">
-            <button type="button"><span class="fa fa-microphone"></span> ヒーローインタビューはこちら</button>
-            </a></li>
-        </ol>
-        <!--<a href="tournament.html">
-        <button type="button" style="margin-bottom: 5em;"><span class="fa fa-sitemap"></span> トーナメント表はこちら</button>
-        </a>  
-        <a href="scoreboard.php">
-        <button type="button"><span class="fa fa-list-ol"></span> 速報スコアボードはこちら</button>
-        </a>--></section>
-      <section>
-        <h3><a href="results.html"><img src="img/top/2nd.png"></a></h3>
-        <!--<p id="timer">【3回戦】7/21（日）14：00～<br>
-          VS　JR東日本</p>--> 
-        <!-- <p class="center" style="font-size: 3em; padding: 0; margin: 1em auto;">20時15分試合開始！</p>-->
-        <p>NTT西日本は1回表、3連打で1アウト満塁のチャンスを作り、景山選手の技ありのライト前タイムリーで2点を先制！なおも続くチャンスに中村選手が3ランホームランを放ち、いきなり5点を先制する。<br>
-          大きな援護点をもらった先発の浜崎投手は、豊富なキャリアを感じさせる堂々のマウンド裁きを披露！ランナーを背負っても動じることなく、コーナーを巧みに突いたピッチングで決定打を許さない。<br>
-          5回表には4番・中西選手にソロホームランが飛び出し、リードをさらに広げる。<br>
-          7回途中からは宅和投手、河津投手、吉元投手の必勝リレーで終盤の猛反撃をしのぎ、6対3で見事勝利。ベスト8にコマを進めた。</p>
+        <h3><a href="results.html"><img src="img/top/1st.gif"></a></h3>
+        <!--<p id="timer">【1回戦】10/25（金）18：00～<br>
+          VS　沖縄電力</p>--> 
+        <!-- <p class="center" style="font-size: 3em; padding: 0; margin: 1em auto;">予定通り18時試合開始！</p>-->
+        <p>NTT西日本は1回表、2アウト2、3塁から山田選手がレフトオーバーのタイムリー3ベースを放ち、幸先よく2点を先制する。<br>
+          先発を託された大江投手はストレート、変化球ともに冴えわたり、3回まで1塁ベースすら踏ませないナイスピッチングを披露！<br>
+          5回表には中村選手に満塁ホームランが飛び出し、6回表にも3点を追加。面白いようにつながる打線に、3塁側スタンドは大盛り上がりとなる。<br>
+          6回途中からは河津投手、宅和投手、大道寺投手、吉元投手と小刻みに投手をリレー。最終回の追い上げを振り切り、10対3で見事勝利！盤石の戦いぶりで次戦にコマを進めた。</p>
         <ol>
           <li><a href="results.html">
             <button type="button"><span class="fa fa-list-ol"></span> 試合結果はこちら</button>
@@ -115,36 +102,60 @@
         <button type="button"><span class="fa fa-list-ol"></span> 速報スコアボードはこちら</button>
         </a>--></section>
       <section>
-        <h3><a href="results.html"><img src="img/top/3rd.png"></a></h3>
-        <!--<p id="timer">【準々決勝】7/23（火）14：00～<br>
-          VS　日立製作所</p>--> 
-        <!--<p class="center" style="font-size: 3em; padding: 0; margin: 1em auto;">現在試合中！</p>-->
-        <p>2点を追うNTT西日本は5回表、ヒットの中井選手を1塁に置いて日下部選手が2ランホームランを放ち、同点に追いつく。<br>
-          先発の大江投手は尻上がりに調子を上げるも、6回にソロホームランを打たれて再びリードを許してしまう。<br>
-          6回途中からは萩原投手、宅和投手、吉元投手と自慢の投手リレーで相手打線を封じ込め、さらなる追加点を許さない。<br>
-          打線は再三チャンスを作るものの、ここぞの場面であと一本が出ず…。惜しくも2対3で敗れ、ベスト4進出はならなかった。</p>
+        <h3><a href="results.html"><img src="img/top/2nd.gif"></a></h3>
+        <!--<p id="timer">【2回戦】10/30（水）14：00～<br>
+          VS　鷺宮製作所</p>--> 
+        <!--<p class="center" style="font-size: 3em; padding: 0; margin: 1em auto;">予定通り14時試合開始！</p>-->
+        <p>先発の浜崎投手はエンジンのかかり切らない立ち上がりを攻められ、2安打と犠牲フライで先制点を奪われてしまう。<br>
+          1点を追う展開になったNTT西日本は5回裏、2アウト満塁から代打の景山選手がタイムリーヒットを放ち、同点に追いつく。<br>
+          6回裏、濱田選手の2ベースヒット、日下部選手のレフト前タイムリーでついに勝ち越し！長田選手にもタイムリーが飛び出し、3対1とリードを広げる。<br>
+          5回途中からは河津投手、宅和投手、吉元投手と初戦同様小刻みな投手リレーで相手打線の追撃を振り切り、3対2で見事勝利！チームはベスト8進出を決めた。</p>
         <ol>
           <li><a href="results.html">
             <button type="button"><span class="fa fa-list-ol"></span> 試合結果はこちら</button>
             </a></li>
-          <li><a href="tournament.html">
-            <button type="button" style="margin-bottom: 5em;"><span class="fa fa-sitemap"></span> トーナメント表はこちら</button>
+          <li><a href="hero.html">
+            <button type="button"><span class="fa fa-microphone"></span> ヒーローインタビューはこちら</button>
             </a></li>
         </ol>
         <!--<a href="tournament.html">
         <button type="button" style="margin-bottom: 5em;"><span class="fa fa-sitemap"></span> トーナメント表はこちら</button>
         </a> --> 
-        <!--<a href="scoreboard.php">
+        <!-- <a href="scoreboard.php">
+        <button type="button"><span class="fa fa-list-ol"></span> 速報スコアボードはこちら</button>
+        </a>--></section>
+      <section>
+        <h3><a href="results.html"><img src="img/top/3rd.gif"></a></h3>
+        <!--<p id="timer">【準々決勝】11/2（土）9：00～<br>
+          VS　大阪ガス</p>--> 
+        <!--<p class="center" style="font-size: 3em; padding: 0; margin: 1em auto;">予定通り9時試合開始！</p>-->
+        <p>NTT西日本は3回裏、中村選手のセンター前ヒットなどで2アウト1、2塁とチャンスメイク。打席が巡ってきた石山選手に大応援が送られる中、相手投手のワイルドピッチで1点を先制する。<br>
+          7回表、ここまで相手打線を完璧に封じ込めていた先発の大江投手がピッチャー強襲ヒットで緊急降板となり、宅和投手がリリーフに。盗塁とエラーでノーアウト1、3塁となり、河津投手にスイッチ。1アウトからタイムリーを打たれて同点となるも、続くピンチをしっかりと抑えて勝ち越しは許さない。<br>
+          8回表、この回からマウンドに上がった吉元投手が立ち上がりを攻められ、ヒットと守備の乱れで2点を奪われてしまう。<br>
+          9回裏、濱田選手、日下部選手の連続ヒットで2アウト1、2塁と1打同点のチャンスを作るものの、あと一本が出ずにゲームセット…。1対3で敗れ、ベスト4進出はならなかった。</p>
+        <ol>
+          <li><a href="results.html">
+            <button type="button"><span class="fa fa-list-ol"></span> 試合結果はこちら</button>
+            </a></li>
+          <li><a href="gallery.html">
+            <button type="button"><span class="fa fa-camera"></span> ギャラリーはこちら</button>
+            </a></li>
+        </ol>
+        <!--<a href="tournament.html">
+        <button type="button" style="margin-bottom: 5em;"><span class="fa fa-sitemap"></span> トーナメント表はこちら</button>
+        </a> --> 
+        <!-- <a href="scoreboard.php">
         <button type="button"><span class="fa fa-list-ol"></span> 速報スコアボードはこちら</button>
         </a>--></section>
     </article>
   </div>
 </main>
 <!--#include virtual="templates/footer.inc"--> 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script> 
 <script type="text/javascript" src="js/jquery.yycountdown.min.js"></script> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/0.0.11/push.min.js"></script> 
 <script type="text/javascript" src="js/jquery.cookie.js"></script> 
+<script type="text/javascript" src="js/push.js"></script> 
 <script type="text/javascript" src="js/top.js"></script>
 </body>
 </html>

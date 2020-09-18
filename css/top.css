@@ -1,17 +1,16 @@
-@charset "UTF-8";
 /* CSS Document */
 /* line 8, ../sass/top.scss */
 html body {
   overflow: hidden;
-  grid-template: 5em auto 3em / 4% 43.2% 52.8%;
-  -ms-grid-rows: auto auto auto;
+  grid-template: 4em auto 3em / 4% 43.2% 52.8%;
+  -ms-grid-rows: 4em auto 3em;
   -ms-grid-columns: 4% 43.2% 52.8%;
 }
 @media all and (max-width: 1500px) {
   /* line 8, ../sass/top.scss */
   html body {
-    grid-template: 5em auto 3em / 4% 43.2% 52.8%;
-    -ms-grid-rows: auto auto auto;
+    grid-template: 4em auto 3em / 4% 43.2% 52.8%;
+    -ms-grid-rows: 4em auto 3em;
     -ms-grid-columns: 4% 43.2% 52.8%;
   }
 }
@@ -19,8 +18,8 @@ html body {
   /* line 8, ../sass/top.scss */
   html body {
     font-size: 0.875rem;
-    grid-template: 5em 4em auto 3em / 50% 50%;
-    -ms-grid-rows: 5em 4em auto 3em;
+    grid-template: auto 4em auto 3em / 50% 50%;
+    -ms-grid-rows: auto 4em auto 3em;
     -ms-grid-columns: 50% 50%;
   }
 }
@@ -59,14 +58,18 @@ html body #global .menu-trigger {
   z-index: 10;
 }
 @media all and (max-width: 1200px) {
-  /* line 62, ../sass/top.scss */
+  /* line 56, ../sass/top.scss */
+  html body #global.fix {
+    z-index: 21;
+  }
+  /* line 63, ../sass/top.scss */
   html body #global.fix > dl .menu-trigger {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 10;
   }
-  /* line 66, ../sass/top.scss */
+  /* line 67, ../sass/top.scss */
   html body #global.fix > dl dd#live img {
     position: fixed;
     bottom: 0;
@@ -93,13 +96,13 @@ html body #global .menu-trigger {
     -ms-grid-column: 1;
   }
 }
-/* line 88, ../sass/top.scss */
+/* line 89, ../sass/top.scss */
 html body #global > dl {
   grid-template: auto auto auto / 0.75fr 9.25fr;
   -ms-grid-columns: 0.75fr 9.25fr;
 }
 @media all and (max-width: 1500px) {
-  /* line 88, ../sass/top.scss */
+  /* line 89, ../sass/top.scss */
   html body #global > dl {
     grid-template: auto auto auto / 0.8fr 9.2fr !important;
     -ms-grid-rows: auto auto auto !important;
@@ -107,7 +110,7 @@ html body #global > dl {
   }
 }
 @media all and (max-width: 1200px) {
-  /* line 88, ../sass/top.scss */
+  /* line 89, ../sass/top.scss */
   html body #global > dl {
     grid-template: auto auto / 1fr 1fr 1fr !important;
     -ms-grid-rows: auto auto  !important;
@@ -115,13 +118,9 @@ html body #global > dl {
   }
 }
 @media all and (max-width: 1500px) {
-  /* line 104, ../sass/top.scss */
+  /* line 105, ../sass/top.scss */
   html body #global > dl .menu-trigger {
     padding: 1em 0.5vw;
-    position: fixed;
-    top: 5.5em;
-    left: 0;
-    z-index: 1;
   }
   /* line 110, ../sass/top.scss */
   html body #global > dl .menu-trigger .new {
@@ -132,7 +131,7 @@ html body #global > dl {
   }
 }
 @media all and (max-width: 1200px) {
-  /* line 104, ../sass/top.scss */
+  /* line 105, ../sass/top.scss */
   html body #global > dl .menu-trigger {
     position: absolute;
     top: 0;
@@ -153,7 +152,7 @@ html body #global > dl > dd#live img {
   min-width: 90%;
   height: auto;
   position: relative;
-  z-index: 20;
+  z-index: 21;
   margin: 0 0 0 0.4vw;
 }
 @media all and (max-width: 1500px) {
@@ -348,58 +347,138 @@ html body main {
 html body main > header {
   position: relative;
   overflow: hidden;
-  background-size: cover;
-  background: url(../img/top/back1.jpg) no-repeat left center !important;
+  z-index: 10;
 }
-/* line 310, ../sass/top.scss */
-html body main > header h2 {
+/* line 309, ../sass/top.scss */
+html body main > header #outer_container {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  bottom: -160px;
+  right: 0;
   z-index: 1;
-  margin: -115px 0 0 -125px;
+  height: 130px;
+  margin: 0px 0px 30px 0px;
+  padding: 0;
+  -webkit-box-reflect: below 5px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.6, transparent), to(#121212));
 }
-@media all and (max-width: 940px) {
-  /* line 310, ../sass/top.scss */
-  html body main > header h2 {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    z-index: 1;
-  }
+/* line 323, ../sass/top.scss */
+html body main > header #outer_container #thumbScroller {
+  position: relative;
+  overflow: hidden;
+  margin-left: 10px;
 }
-@media all and (max-width: 600px) {
-  /* line 310, ../sass/top.scss */
-  html body main > header h2 {
-    margin: -92px 0 0 -75px;
-  }
-}
-/* line 324, ../sass/top.scss */
-html body main > header ul {
+/* line 328, ../sass/top.scss */
+html body main > header #outer_container #thumbScroller .container {
+  position: relative;
+  left: 0;
   display: flex;
   flex-flow: row nowrap;
 }
-/* line 328, ../sass/top.scss */
-html body main > header ul:first-of-type {
+/* line 334, ../sass/top.scss */
+html body main > header #outer_container #thumbScroller .container .content {
+  padding-right: 10px;
+}
+/* line 337, ../sass/top.scss */
+html body main > header #outer_container #thumbScroller .container .content img, html body main > header #outer_container #thumbScroller .container .content img.clone {
+  height: 120px;
+  cursor: pointer;
+  border: #FFF 1px solid;
+}
+/* line 347, ../sass/top.scss */
+html body main > header .fp_loading {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 12;
+  margin: -35px 0px 0px -35px;
+  background: #000 url(../img/top/loader.gif) no-repeat center center;
+  width: 70px;
+  height: 70px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  opacity: 0.7;
+}
+/* line 360, ../sass/top.scss */
+html body main > header .fp_next, html body main > header .fp_prev {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  margin-top: -15px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+/* line 371, ../sass/top.scss */
+html body main > header .fp_next:hover, html body main > header .fp_prev:hover {
+  opacity: 0.9;
+}
+/* line 375, ../sass/top.scss */
+html body main > header .fp_next {
+  background: #000 url(../img/top/next.png) no-repeat center center;
+  right: -50px;
+}
+/* line 380, ../sass/top.scss */
+html body main > header .fp_prev {
+  background: #000 url(../img/top/prev.png) no-repeat center center;
+  left: -50px;
+}
+/* line 385, ../sass/top.scss */
+html body main > header .fp_thumbtoggle {
+  position: absolute;
+  bottom: -50px;
+  right: 50%;
+  z-index: 1;
+  width: 200px !important;
+  height: 50px !important;
+  background: #000;
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 1px #000;
+  margin-right: -100px;
+  line-height: 50px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+/* line 399, ../sass/top.scss */
+html body main > header .fp_thumbtoggle:hover {
+  opacity: 1.0;
+}
+/* line 403, ../sass/top.scss */
+html body main > header #fp_preview {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  background: transparent url(../img/top/pattern.png) repeat-x left bottom;
+  background-attachment: fixed;
+}
+/* line 410, ../sass/top.scss */
+html body main > header #fp_preview img.fp_preview {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 0;
+  z-index: 1;
+  width: 100%;
+  height: auto;
 }
-/* line 332, ../sass/top.scss */
-html body main > header ul:last-of-type {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: 0;
+/* line 416, ../sass/top.scss */
+html body main > header #fp_preview .fp_overlay {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  background: transparent url(../img/top/pattern.png) repeat-x left bottom;
+  background-attachment: fixed;
 }
-/* line 336, ../sass/top.scss */
-html body main > header ul li {
-  margin: 1em 0.5em;
+@media all and (max-width: 600px) {
+  /* line 416, ../sass/top.scss */
+  html body main > header #fp_preview .fp_overlay {
+    z-index: 0;
+  }
 }
-/* line 342, ../sass/top.scss */
+/* line 430, ../sass/top.scss */
 html body main > div {
-  background: url(../img/common/dot.png) repeat top left, url(../img/top/back2.jpg) no-repeat center center;
+  background: url(../img/common/dot.png) repeat top left, url(../img/top/back.jpg) no-repeat center center;
   background-size: auto , cover;
   overflow-x: hidden;
   overflow-y: visible !important;
@@ -408,7 +487,7 @@ html body main > div {
   z-index: 0;
 }
 @media all and (max-width: 1200px) {
-  /* line 342, ../sass/top.scss */
+  /* line 430, ../sass/top.scss */
   html body main > div {
     grid-area: 1 / 2 / 2 / 3;
     -ms-grid-row: 1;
@@ -416,57 +495,57 @@ html body main > div {
   }
 }
 @media all and (max-width: 940px) {
-  /* line 342, ../sass/top.scss */
+  /* line 430, ../sass/top.scss */
   html body main > div {
     grid-area: 2 / 1 / 3 / 2;
     -ms-grid-row: 2;
     -ms-grid-column: 1;
   }
 }
-/* line 363, ../sass/top.scss */
+/* line 451, ../sass/top.scss */
 html body main > div #timer {
   margin-top: -3em;
   text-align: center;
   font-weight: bold;
 }
-/* line 368, ../sass/top.scss */
+/* line 456, ../sass/top.scss */
 html body main > div #timer .yycountdown-box {
-  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
   margin-top: 1em;
   color: #012052;
   text-shadow: -1px -1px 3px #fff, 1px 1px 3px #fff;
 }
-/* line 374, ../sass/top.scss */
+/* line 461, ../sass/top.scss */
 html body main > div #timer .yycountdown-box .yyc-day, html body main > div #timer .yycountdown-box .yyc-hou, html body main > div #timer .yycountdown-box .yyc-min, html body main > div #timer .yycountdown-box .yyc-sec {
   font-size: 3em;
 }
-/* line 380, ../sass/top.scss */
+/* line 467, ../sass/top.scss */
 html body main > div article {
   display: flex;
   flex-flow: row wrap;
   width: 500%;
   background: none;
 }
-/* line 386, ../sass/top.scss */
+/* line 473, ../sass/top.scss */
 html body main > div article > section {
   width: 20%;
   background: none !important;
   padding: 0 !important;
   margin: 0 !important;
 }
-/* line 392, ../sass/top.scss */
+/* line 479, ../sass/top.scss */
 html body main > div article > section img {
   width: 80%;
   height: auto;
   display: block;
-  margin: 10em auto 3em auto;
+  margin: 15em auto 3em auto;
 }
-/* line 399, ../sass/top.scss */
+/* line 486, ../sass/top.scss */
 html body main > div article > section p {
   padding: 2em;
   color: #fff;
+  text-shadow: -1px -1px 3px #000, 1px 1px 3px #000;
 }
-/* line 404, ../sass/top.scss */
+/* line 492, ../sass/top.scss */
 html body main > div article > section ol {
   display: flex;
   flex-flow: row wrap;
@@ -475,7 +554,7 @@ html body main > div article > section ol {
   width: 100%;
   margin-bottom: 6em;
 }
-/* line 415, ../sass/top.scss */
+/* line 503, ../sass/top.scss */
 html body main > div article > section a button {
   color: #333333;
   background-color: #fff;
@@ -490,15 +569,15 @@ html body main > div article > section a button {
   width: 40%;
   min-width: 250px;
 }
-/* line 429, ../sass/top.scss */
+/* line 517, ../sass/top.scss */
 html body main > div article > section a button:hover {
   opacity: 1;
 }
-/* line 433, ../sass/top.scss */
+/* line 521, ../sass/top.scss */
 html body main > div article > section a button span {
   margin-right: 1em;
 }
-/* line 442, ../sass/top.scss */
+/* line 530, ../sass/top.scss */
 html body main dl {
   position: absolute;
   top: 0;
@@ -513,28 +592,22 @@ html body main dl {
   width: 100%;
   overflow: hidden;
 }
-/* line 453, ../sass/top.scss */
+/* line 541, ../sass/top.scss */
 html body main dl.fix {
   position: fixed;
   top: 4em;
   left: 0;
   z-index: 10;
 }
-/* line 457, ../sass/top.scss */
+/* line 545, ../sass/top.scss */
 html body main dl.fix2 {
   position: fixed;
-  top: 5em;
+  top: 4em;
   left: 47.2%;
   z-index: 10;
-  width: 51.9%;
+  width: 52.8%;
 }
-@media all and (max-width: 1500px) {
-  /* line 457, ../sass/top.scss */
-  html body main dl.fix2 {
-    width: 52.8%;
-  }
-}
-/* line 466, ../sass/top.scss */
+/* line 550, ../sass/top.scss */
 html body main dl.fix3 {
   position: fixed;
   top: 9em;
@@ -542,19 +615,19 @@ html body main dl.fix3 {
   z-index: 10;
   width: 50%;
 }
-/* line 471, ../sass/top.scss */
+/* line 555, ../sass/top.scss */
 html body main dl dt {
   font-size: 2em;
   background: rgba(1, 32, 82, 0.8);
   flex-grow: 2;
   padding: 0.7em 0.5em 0 0.5em;
 }
-/* line 477, ../sass/top.scss */
+/* line 561, ../sass/top.scss */
 html body main dl dt span {
   font-size: 0.5em;
   text-align: left;
 }
-/* line 483, ../sass/top.scss */
+/* line 567, ../sass/top.scss */
 html body main dl dd {
   font-size: 0.9em;
   color: #b3b3b3;
@@ -564,33 +637,33 @@ html body main dl dd {
   padding: 0 0.5em;
   /*&:hover,*/
 }
-/* line 491, ../sass/top.scss */
-html body main dl dd:nth-of-type(-n + 3) {
+/* line 575, ../sass/top.scss */
+html body main dl dd.day {
   cursor: pointer;
   color: #fff;
 }
-/* line 497, ../sass/top.scss */
+/* line 581, ../sass/top.scss */
 html body main dl dd.current {
   background: none;
   color: #fff;
   text-shadow: -1px -1px 3px #000, 1px 1px 3px #000;
 }
-/* line 504, ../sass/top.scss */
+/* line 588, ../sass/top.scss */
 html body main dl span {
   font-size: 0.8em;
 }
-/* line 510, ../sass/top.scss */
+/* line 594, ../sass/top.scss */
 html body #pagetop {
   display: none;
 }
 @media all and (max-width: 940px) {
-  /* line 510, ../sass/top.scss */
+  /* line 594, ../sass/top.scss */
   html body #pagetop {
     display: block;
   }
 }
 @media all and (max-width: 1500px) {
-  /* line 518, ../sass/top.scss */
+  /* line 602, ../sass/top.scss */
   html body footer {
     grid-area: 3 / 3 / 4 / 4;
     -ms-grid-row: 3;
@@ -599,7 +672,7 @@ html body #pagetop {
   }
 }
 @media all and (max-width: 1200px) {
-  /* line 518, ../sass/top.scss */
+  /* line 602, ../sass/top.scss */
   html body footer {
     grid-area: 4 / 2 / 5 / 3;
     -ms-grid-row: 4;
@@ -607,43 +680,30 @@ html body #pagetop {
   }
 }
 @media all and (max-width: 940px) {
-  /* line 518, ../sass/top.scss */
+  /* line 602, ../sass/top.scss */
   html body footer {
     grid-area: 4 / 1 / 5 / 2;
     -ms-grid-row: 4;
     -ms-grid-column: 1;
   }
 }
-/* line 542, ../sass/top.scss */
+/* line 626, ../sass/top.scss */
 html body#nf_title main {
   overflow-y: hidden !important;
 }
-/* line 547, ../sass/top.scss */
-html body#nf_title main header h2 {
-  margin-top: -35%;
-}
-/* line 551, ../sass/top.scss */
-html body#nf_title main header h3 {
-  margin-top: 11em;
-}
-/* line 556, ../sass/top.scss */
+/* line 629, ../sass/top.scss */
 html body#nf_title main div {
   padding: 0 !important;
 }
 @media all and (max-width: 940px) {
-  /* line 542, ../sass/top.scss */
+  /* line 626, ../sass/top.scss */
   html body#nf_title main {
     grid-template: auto 50em / 100%;
     -ms-grid-rows: auto 50em;
     -ms-grid-columns: 100%;
   }
-  /* line 565, ../sass/top.scss */
-  html body#nf_title main header {
-    overflow: visible !important;
-    height: auto !important;
-  }
-  /* line 569, ../sass/top.scss */
-  html body#nf_title main header h2 {
-    margin-top: -20%;
-  }
+}
+/* line 639, ../sass/top.scss */
+html body#nf_title main h3 {
+  margin-top: 8em;
 }

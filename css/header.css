@@ -250,7 +250,7 @@ header#top #topnavi li {
   -ms-grid-column-align: center;
   text-align: center;
   position: relative;
-  z-index: 2;
+  z-index: 12;
 }
 /* line 216, ../sass/header.scss */
 #global > dl > dd#live img {

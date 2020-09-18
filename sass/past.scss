@@ -50,10 +50,12 @@ article {
 				list-style		: none;
 				padding			: 0 0 0 2em;
 				display			: flex;
-				flex-flow		: row wrap;
+				flex-flow		: column wrap;
 				
 				li {
-					visibility	 : hidden;
+					visibility 		: hidden;
+					box-shadow 		: 7px 7px 7px rgba(0,0,0,0.3);
+					background-color: $white;
 					
 					&.show {
 						visibility	 : visible !important;
@@ -74,7 +76,6 @@ article {
 					h5 {
 						margin		: 0;
 						padding		: 1em 1em 0 1em;
-						box-shadow	: 7px 7px 7px rgba(0,0,0,0.3);
 	
 						&:before {
 							content: '【';
@@ -88,7 +89,6 @@ article {
 					p {
 						padding		: 1em;
 						font-weight : bold;
-						box-shadow	: 7px 7px 7px rgba(0,0,0,0.3);
 						
 						i {
 							color: $navy;
@@ -130,6 +130,7 @@ article {
 		
 		ul {
 			padding-left	: 0;
+			flex-flow		: row wrap !important;
 			justify-content : space-between;
 		
 			.show {

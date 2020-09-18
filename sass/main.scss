@@ -50,7 +50,6 @@ main {
 		grid-area			: 1 / 1 / 2 / 2;
 		-ms-grid-row		: 1;
 		-ms-grid-column		: 1;
- 		font-family 		: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
 		color				: $white;
 		background-size		: cover;
 		background-position	: 50% 50%;
@@ -88,27 +87,28 @@ main {
 		}
 
 		h2 {
-			@include abT(28%,50%,0);
-			margin: -115px 0 0 -125px;		
+			width: 40%;
+			@include abT(1em,3%,2);
 			
 			@include media($of) {
-				@include abT(23%,50%,0);
-			}		
-			
-			@include media($ot) {
-				@include abT(30%,50%,0);
+				@include abT(0.5em,3%,2);
 			}
 			
-			@include media($six) {
-				margin: -50px 0 0 -75px;
+			@include media($ot) {
+				@include abT(0.5em,1.5%,2);
 			}
 			
 			img {
-				width	 : 250px;
+				width 	 : $max;
+				min-width: 250px;
 				height	 : auto;
 			
+				@include media($ot) {
+					max-width: 300px;
+				}
+			
 				@include media($six) {
-					width: 150px;
+					min-width: 180px;
 				}
 			}
 		}
@@ -120,10 +120,13 @@ main {
 			font-weight : normal;
 			text-shadow : -1px -1px 3px $black, 1px 1px 3px $black;
 			margin-top	: 9em;
-			font-weight : bold;
 			
 			@include media($ot) {
 				margin-top	: 9.5em;
+			}
+			
+			@include media($six) {
+				margin-top	: 8em;
 			}
 			
 			span {
@@ -137,7 +140,6 @@ main {
 			text-align	: center;
 			margin-top	: 1em;
 			font-size	: 2em;
-			font-weight : bold;
 			text-shadow	: -1px -1px 3px $black, 1px 1px 3px $black;
 			
 			@include media($six) {
@@ -369,11 +371,16 @@ main {
 		overflow		: hidden;
 		background-size : cover;
 		
-		@for $value from 1 through 8 {
-			
+		@for $value from 1 through 11 {
+				
 			&.bg#{$value} {
-				background-image: url(#{$ip}common/0#{$value}.png);
-			}
+			
+				@if $value < 10 {
+					background-image :  url(#{$ip}common/0#{$value}.png);
+				} @else {
+					background-image : url(#{$ip}common/#{$value}.png);
+				}
+			} 
 		}
 		
 		header {
@@ -381,7 +388,6 @@ main {
 			margin		: 7em 0;
 			color		: $navy;
 			width		: $max;
-  			font-family : "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
 			
 			h4 {
 				font-size	: 2em;
@@ -400,6 +406,31 @@ main {
 			border-top	 : 1px dotted lighten($black,50%);
 			margin-bottom: 4em;
 		}
+					
+		table {
+			border-collapse : collapse;
+			border			: lighten($black,70%) solid 1px;
+			padding			: 0;
+			width			: $max;
+
+			thead th {
+				background-color: lighten($modal,30%);
+				color 			: $white;
+			}
+
+			th,td {
+				border-right: lighten($black,70%) dotted 1px;
+				padding		: 0.7em 0.5em;
+				text-align	: center;
+				width		: auto;
+			}
+
+			&.border {
+				caption {
+					color: lighten($black,40%) !important;
+				}
+			}
+		}
 		
 		& > section, & > div {
 			
@@ -413,19 +444,6 @@ main {
 					
 					dl {
 						margin-top: 1em !important;
-					}
-				}
-			}
-			
-			table {
-				border-collapse : collapse;
-				border			: lighten($black,70%) solid 1px;
-				padding			: 0;
-				width			: $max;
-	
-				&.border {
-					caption {
-						color: lighten($black,40%) !important;
 					}
 				}
 			}

@@ -195,18 +195,6 @@
   font-size: 1.25em;
 }
 /* line 174, ../sass/results.scss */
-.contents table thead th {
-  background-color: rgba(77, 77, 77, 0.8);
-  color: #fff;
-}
-/* line 179, ../sass/results.scss */
-.contents table th, .contents table td {
-  border-right: #b3b3b3 dotted 1px;
-  padding: 0.7em 0.5em;
-  text-align: center;
-  width: auto;
-}
-/* line 186, ../sass/results.scss */
 .contents table.battery {
   border: none;
   width: auto;
@@ -214,58 +202,58 @@
   border-spacing: 0 0.5em;
   margin-bottom: 5em !important;
 }
-/* line 193, ../sass/results.scss */
+/* line 181, ../sass/results.scss */
 .contents table.battery th, .contents table.battery td {
   border: none;
   text-align: left;
   padding: 0.4em;
   line-height: 100%;
 }
-/* line 200, ../sass/results.scss */
+/* line 188, ../sass/results.scss */
 .contents table.battery .b_n {
   background-color: rgba(44, 126, 255, 0.9);
   color: #fff;
 }
-/* line 205, ../sass/results.scss */
+/* line 193, ../sass/results.scss */
 .contents table.battery .b_e {
   background-color: rgba(77, 77, 77, 0.8);
   color: #fff;
 }
-/* line 211, ../sass/results.scss */
+/* line 199, ../sass/results.scss */
 .contents table.score {
   font-size: 80%;
 }
-/* line 214, ../sass/results.scss */
+/* line 202, ../sass/results.scss */
 .contents table.score thead th {
   background-color: rgba(1, 32, 82, 0.8);
 }
-/* line 219, ../sass/results.scss */
+/* line 207, ../sass/results.scss */
 .contents table .current {
   background-color: rgba(26, 26, 26, 0.8) !important;
   font-weight: bold;
 }
-/* line 223, ../sass/results.scss */
+/* line 211, ../sass/results.scss */
 .contents table .current a {
   color: #fff;
 }
-/* line 230, ../sass/results.scss */
+/* line 218, ../sass/results.scss */
 .contents table.blue caption {
   color: #2c7eff !important;
 }
-/* line 234, ../sass/results.scss */
+/* line 222, ../sass/results.scss */
 .contents table.blue thead th {
   background-color: rgba(44, 126, 255, 0.9);
 }
-/* line 239, ../sass/results.scss */
+/* line 227, ../sass/results.scss */
 .contents table .back_blue th, .contents table .back_blue td {
   background-color: rgba(223, 235, 255, 0.9);
 }
-/* line 244, ../sass/results.scss */
+/* line 232, ../sass/results.scss */
 .contents .ntt thead th {
   background-color: rgba(44, 126, 255, 0.9);
   color: #FFF;
 }
-/* line 249, ../sass/results.scss */
+/* line 237, ../sass/results.scss */
 .contents .enemy thead th {
   background-color: rgba(77, 77, 77, 0.8);
   color: #FFF;

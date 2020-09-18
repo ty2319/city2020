@@ -31,7 +31,11 @@ $count_ini = pg_fetch_result($rs1,0,0);
 <html>
 <head>
 <meta charset="euc-jp">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script src="https://cdn.jsdelivr.net/npm/viewport-extra@1.0.3/dist/viewport-extra.min.js"></script> 
+<script>
+	new ViewportExtra(370)
+</script>
 <title>試合経過｜第45回社会人野球日本選手権大会｜NTT西日本</title>
 <meta name="keywords" content="NTT西日本,都市対抗,2019,シンボル,試合経過" />
 <meta name="description" content="
