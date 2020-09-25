@@ -36,16 +36,16 @@ $count_ini = pg_fetch_result($rs1,0,0);
 <script>
 	new ViewportExtra(370)
 </script>
-<title>試合経過｜第45回社会人野球日本選手権大会｜NTT西日本</title>
+<title>試合経過｜第91回都市対抗野球大会｜NTT西日本</title>
 <meta name="keywords" content="NTT西日本,都市対抗,2019,シンボル,試合経過" />
 <meta name="description" content="
-第45回社会人野球日本選手権大会での、NTT西日本の試合経過です。" />
+第91回都市対抗野球大会での、NTT西日本の試合経過です。" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="第45回社会人野球日本選手権大会" />
+<meta property="og:title" content="第91回都市対抗野球大会" />
 <meta property="og:description" content="社会人野球
-第45回社会人野球日本選手権大会での、NTT西日本の試合経過です。" />
+第91回都市対抗野球大会での、NTT西日本の試合経過です。" />
 <meta property="og:url" content="http://www.ntt-west.co.jp/symbol/hp/baseball/games/2019/city/" />
-<meta property="og:site_name" content="第45回社会人野球日本選手権大会" />
+<meta property="og:site_name" content="第91回都市対抗野球大会" />
 <meta property="og:country-name" content="Japan,日本" />
 <meta property="og:locality" content="Osaka,大阪" />
 <meta property="og:image" content="http://www.ntt-west.co.jp/favicon.ico" />
@@ -464,7 +464,7 @@ $section_id = $section_id + 1 ;
 
 
   </section>
-  <p id="pan">第45回社会人野球日本選手権大会 ≫ 試合経過</p>
+  <p id="pan">第91回都市対抗野球大会 ≫ 試合経過</p>
 </article>
 </main>
 <?php

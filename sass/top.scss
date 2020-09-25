@@ -302,126 +302,59 @@ html {
 			}
 
 			& > header {
-				position 			 : $r;
-				overflow 			 : hidden;
-				z-index 			 : 10;
+				position: $r;
+				overflow: hidden;
+				z-index : 10;
 				
-				#outer_container {
-					@include abB(-160px,0,1);
-					height 				: 130px;
-					margin 				: 0px 0px 30px 0px;
-					padding 			: 0;
-					-webkit-box-reflect : below 5px -webkit-gradient(
-						linear,
-						left top,
-						left bottom,
-						from(transparent),
-						color-stop(0.6, transparent),
-						to(rgb(18, 18, 18))
-					);
-				
-					#thumbScroller {
-						position 	: $r;
-						overflow 	: hidden;
-						margin-left : 10px;
-						
-						 .container {
-							position : $r;
-							left 	 : 0;
-							display  : flex;
-							flex-flow: row nowrap;
-							 
-							 .content {
-								 padding-right: 10px;
-								 
-								 img , img.clone {
-									height: 120px;
-									cursor: pointer;
-									border: #FFF 1px solid;
-								}
-							}
-						}
-					}
-				}
-				
-				.fp_loading {
-					display 	 		 : none;
-					@include abT(50%,50%,12);
-					margin 		 		 : -35px 0px 0px -35px;
-					background 	 		 : #000 url(#{$ip}top/loader.gif) no-repeat center center;
-					width 		 		 : 70px;
-					height 		 		 : 70px;
-					-moz-border-radius 	 : 10px;
-					-webkit-border-radius: 10px;
-					border-radius 		 : 10px;
-					opacity 			 : 0.7;
-				}
-				
-				.fp_next , .fp_prev {
-					width 	 	: 50px;
-					height 		: 50px;
-					position 	: absolute;
-					top 		: 50%;
-					z-index 	: 1;
-					margin-top 	: -15px;
-					cursor 		: pointer;
-					opacity 	: 0.5;
-				}
-				
-				.fp_next:hover , .fp_prev:hover{
-					opacity:0.9;
-				}
-				
-				.fp_next {
-					background 	: #000 url(#{$ip}top/next.png) no-repeat center center;
-					right 	 	: -50px;
-				}
-				
-				.fp_prev {
-					background 	:#000 url(#{$ip}top/prev.png) no-repeat center center;
-					left 		: -50px;
-				}
-				
-				.fp_thumbtoggle {
-					@include abB(-50px,50%,1);
-					width 		 	: 200px !important;
-					height 	 	 	: 50px !important;
-					background 	 	: #000;
-					text-align 		: center;
-					letter-spacing 	: 1px;
-					text-shadow 	: 1px 1px 1px #000;
-					margin-right 	: -100px;
-					line-height 	: 50px;
-					cursor 		 	: pointer;
-					opacity 		: 0.8;
-				}
-				
-				.fp_thumbtoggle:hover {
-					opacity: 1.0;
-				}
-				
-				#fp_preview {
-					position 			 : $r;
-					height 				 : $max;
-					overflow 			 : hidden;
-					background 			 : transparent url(#{$ip}top/pattern.png) repeat-x left bottom;
-					background-attachment: fixed;
+				.pe-thumbs {
+					display 	: flex;
+					flex-flow 	: row wrap;
+					background 	: transparent url(../images/2.jpg) center center;
+					box-shadow 	: 0 1px 2px rgba(0,0,0,0.2);
 					
-					img.fp_preview {
-						@include abT(0,0,1);
-						width :$max;
-						height: auto;
-					}
-				
-					.fp_overlay {
-						width 				 : 100%;
-						position 			 : $r;
-						z-index 			 : 1;
-						background 			 : transparent url(#{$ip}top/pattern.png) repeat-x left bottom;
-						background-attachment: fixed;
+					li {
+						width: $max / 5;
 						
 						@include media($six) {
-							z-index: 0;
+							width: $max / 3;
+						}
+						
+						a {
+							display : block;
+							position: relative;
+							
+							img {
+								display : block;
+								position: relative;
+								width 	: $max;
+								height 	: auto;
+								opacity : 0.2;
+							}
+							
+							div.pe-description {
+								width 		: $max * 2;
+								background 	: rgba(111,76,51,0.8);
+								position 	: absolute;
+								top 		: 0;
+								left 		: -$max * 2;
+								color 		: $white;
+								display 	: none;
+								z-index 	: 1001;
+								text-align 	: left;
+								font-style 	: italic;
+								
+								h3 {
+									font-family : 'Impact';
+									font-size 	: 2em;
+									margin 		: 0;
+								}
+								
+								p {
+									padding 	: 1em;
+									margin 		: 1em;
+									border-top 	: 1px solid rgba(255,255,255,0.3);
+								}
+							}
 						}
 					}
 				}

@@ -202,7 +202,7 @@
 		});
  
 		//JSONファイルを取得
-		$.getJSON('/symbol/hp/baseball/games/2019/japan/js/update.json').done(function(json, status, request) {
+		$.getJSON('/symbol/hp/baseball/games/2020/city/js/update.json').done(function(json, status, request) {
 			
 			var cnt = 0;
 			

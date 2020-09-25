@@ -3,8 +3,8 @@
 	//ie css
 	set = function() {
 		
-		$('#topnavi li a,footer li a,#issues a').prepend('¢ä ');
-		$('#side li a').append(' ¡ü');
+		$('#topnavi li a,footer li a,#issues a').prepend('¢E');
+		$('#side li a').append(' ¡E);
 		$('.box dt').not('#issues dt').append('¡§');
 		$('.dot dd').prepend('¡¦');
 		$('.box2 dt').prepend('¡½¡¡').append('¡¡¡½');
@@ -201,8 +201,8 @@
 			}
 		});
  
-		//JSON¥Õ¥¡¥¤¥ë¤ò¼èÆÀ
-		$.getJSON('/symbol/hp/baseball/games/2019/japan/js/update.json').done(function(json, status, request) {
+		//JSON¥Õ¥¡¥¤¥Eò¼èÆÀ
+		$.getJSON('/symbol/hp/baseball/games/2020/city/js/update.json').done(function(json, status, request) {
 			
 			var cnt = 0;
 			
@@ -216,9 +216,9 @@
 					elem = '.index';
 				}
 		
-				if (today < ago) { // º£Æü(today)¤¬ago(¹¹¿·Æü + 5Æü)¤è¤êÁ°¤Ê¤é
+				if (today < ago) { // º£ÆEtoday)¤¬ago(¹¹¿·ÆE+ 5ÆE¤è¤E°¤Ê¤E
 					if ($.cookie('visit' + elem + '.html') == null || $.cookie('visit' + elem + '.html') < data.date) {
-						$('#global').find(elem).append('<span class="new">N</span>'); // ¥¯¥é¥¹¡Önew¡×¤òÉÕ¤±¤ë
+						$('#global').find(elem).append('<span class="new">N</span>'); // ¥¯¥é¥¹¡Önew¡×¤òÉÕ¤±¤E
 					}
 				} else {
 					$.cookie('visit' + elem + '.html' , null);						
@@ -269,7 +269,7 @@
 		return false;
 		});
 		
-		var set =  $('header#top').height() + 1;//¥¦¥¤¥ó¥É¥¦¾åÉô¤«¤é¤É¤ì¤°¤é¤¤¤Î°ÌÃÖ¤ÇÊÑ²½¤µ¤»¤ë¤«
+		var set =  $('header#top').height() + 1;//¥¦¥¤¥ó¥É¥¦¾åÉô¤«¤é¤É¤E°¤é¤¤¤Î°ÌÃÖ¤ÇÊÑ²½¤µ¤»¤E«
 		var boxTop			= new Array;
 		var current			= -1;
 		var startPosition	= 0;
@@ -280,9 +280,9 @@
 				boxTop[i] = $(this).offset().top -1;
 			});
 		});
-		//ºÇ½é¤ÎÍ×ÁÇ¤Ëclass="on"¤ò¤Ä¤±¤ë
+		//ºÇ½é¤ÎÍ×ÁÇ¤Ëclass="on"¤ò¤Ä¤±¤E
 		changeBox(-1);
-		//¥¹¥¯¥í¡¼¥ë¤·¤¿»ş¤Î½èÍı
+		//¥¹¥¯¥ú½¼¥E·¤¿»ş¤Î½èÍı
 		$(window).scroll(function(){
 			
 			var scrollPosition	= $(window).scrollTop();	
