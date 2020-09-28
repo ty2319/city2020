@@ -299,139 +299,168 @@
 	  
     },
 
-    tile = function () {
+    Tile = function () {
 
-      var elems = $([]),
-        doc = $(document);
+      var Photo	= (function() {
+					
+			// list of thumbs
+		var $list		= $('#pe-thumbs'),
+			// list's width and offset left.
+			// this will be used to know the position of the description container
+			listW		= $list.width(),
+			listL		= $list.offset().left,
+			// the images
+			$elems		= $list.find('img'),
+			// the description containers
+			$descrp		= $list.find('div.pe-description'),
+			// maxScale : maximum scale value the image will have
+			// minOpacity / maxOpacity : minimum (set in the CSS) and maximum values for the image's opacity
+			settings	= {
+				maxScale	: 1.3,
+				maxOpacity	: 0.9,
+				minOpacity	: Number( $elems.css('opacity') )
+			},
+			init		= function() {
 
-      $.event.special.proximity = {
+				// minScale will be set in the CSS
+				settings.minScale = _getScaleVal() || 1;
+				// preload the images (thumbs)
+				_loadImages( function() {
 
-        defaults: {
-          max: 100,
-          min: 0,
-          throttle: 0,
-          fireOutOfBounds: 1
-        },
+					_calcDescrp();
+					_initEvents();
 
-        setup: function (data) {
+				});
 
-          if (!elems[0])
-            doc.mousemove(handle);
+			},
+			// Get Value of CSS Scale through JavaScript:
+			// http://css-tricks.com/get-value-of-css-rotation-through-javascript/
+			_getScaleVal= function() {
 
-          elems = elems.add(this);
+				var st = window.getComputedStyle($elems.get(0), null),
+					tr = st.getPropertyValue("-webkit-transform") ||
+						 st.getPropertyValue("-moz-transform") ||
+						 st.getPropertyValue("-ms-transform") ||
+						 st.getPropertyValue("-o-transform") ||
+						 st.getPropertyValue("transform") ||
+						 "fail...";
 
-        },
+				if( tr !== 'none' ) {	 
 
-        add: function (o) {
+					var values = tr.split('(')[1].split(')')[0].split(','),
+						a = values[0],
+						b = values[1],
+						c = values[2],
+						d = values[3];
 
-          var handler = o.handler,
-            data = $.extend({}, $.event.special.proximity.defaults, o.data),
-            lastCall = 0,
-            nFiredOutOfBounds = 0,
-            hoc = $(this);
+					return Math.sqrt( a * a + b * b );
 
-          o.handler = function (e, pageX, pageY) {
+				}
 
-            var max = data.max,
-              min = data.min,
-              throttle = data.throttle,
-              date = +new Date,
-              distance,
-              proximity,
-              inBounds,
-              fireOutOfBounds = data.fireOutOfBounds;
+			},
+			// calculates the style values for the description containers,
+			// based on the settings variable
+			_calcDescrp	= function() {
 
-            if (throttle && lastCall + throttle > date) {
-              return;
-            }
+				$descrp.each( function(i) {
 
-            lastCall = date;
+					var $el		= $(this),
+						$img	= $el.prev(),
+						img_w	= $img.width(),
+						img_h	= $img.height(),
+						img_n_w	= settings.maxScale * img_w,
+						img_n_h	= settings.maxScale * img_h,
+						space_t = ( img_n_h - img_h ) / 2,
+						space_l = ( img_n_w - img_w ) / 2;
 
-            distance = calcDistance(hoc, pageX, pageY);
-            inBounds = distance < max && distance > min;
+					$el.data( 'space_l', space_l ).css({
+						height	: img_n_h,
+						top		: -space_t,
+						left	: img_n_w - space_l
+					});
 
-            if (fireOutOfBounds || inBounds) {
+				});
 
-              if (inBounds) {
-                nFiredOutOfBounds = 0;
-              } else {
+			},
+			_initEvents	= function() {
 
-                // If fireOutOfBounds is a number then keep incrementing a
-                // counter to determine how many times the handler's been
-                // called out of bounds. Note: the counter is reset whenever
-                // the cursor goes back inBounds...
+				$elems.on('proximity.Photo', { max: 80, throttle: 10, fireOutOfBounds : true }, function(event, proximity, distance) {
 
-                if (typeof fireOutOfBounds === 'number' && nFiredOutOfBounds > fireOutOfBounds) {
-                  return;
-                }
-                ++nFiredOutOfBounds;
-              }
+					var $el			= $(this),
+						$li			= $el.closest('li'),
+						$desc		= $el.next(),
+						scaleVal	= proximity * ( settings.maxScale - settings.minScale ) + settings.minScale,
+						scaleExp	= 'scale(' + scaleVal + ')';
 
-              proximity = e.proximity = 1 - (
-                distance < max ? distance < min ? 0 : distance / max : 1
-              );
+					// change the z-index of the element once it reaches the maximum scale value
+					// also, show the description container
+					if( scaleVal === settings.maxScale ) {
 
-              e.distance = distance;
-              e.pageX = pageX;
-              e.pageY = pageY;
-              e.data = data;
+						$li.css( 'z-index', 1000 );
 
-              return handler.call(this, e, proximity, distance);
+						if( $desc.offset().left + $desc.width() > listL + listW ) {
 
-            }
+							$desc.css( 'left', -$desc.width() - $desc.data( 'space_l' ) );
 
-          };
+						}
 
-        },
+						$desc.fadeIn( 800 );
 
-        teardown: function () {
+					}	
+					else {
 
-          elems = elems.not(this);
+						$li.css( 'z-index', 1 );
 
-          if (!elems[0])
-            doc.unbind('mousemove', handle);
+						$desc.stop(true,true).hide();
 
-        }
+					}	
 
-      };
+					$el.css({
+						'-webkit-transform'	: scaleExp,
+						'-moz-transform'	: scaleExp,
+						'-o-transform'		: scaleExp,
+						'-ms-transform'		: scaleExp,
+						'transform'			: scaleExp,
+						'opacity'			: ( proximity * ( settings.maxOpacity - settings.minOpacity ) + settings.minOpacity )
+					});
 
-      function calcDistance(el, x, y) {
+				});
 
-        // Calculate the distance from the closest edge of the element
-        // to the cursor's current position
+			},
+			_loadImages	= function( callback ) {
 
-        var left, right, top, bottom, offset,
-          cX, cY, dX, dY,
-          distance = 0;
+				var loaded 	= 0,
+					total	= $elems.length;
 
-        offset = el.offset();
-        left = offset.left;
-        top = offset.top;
-        right = left + el.outerWidth();
-        bottom = top + el.outerHeight();
+				$elems.each( function(i) {
 
-        cX = x > right ? right : x > left ? x : left;
-        cY = y > bottom ? bottom : y > top ? y : top;
+					var $el = $(this);
 
-        dX = Math.abs(cX - x);
-        dY = Math.abs(cY - y);
+					$('<img/>').load( function() {
 
-        return Math.sqrt(dX * dX + dY * dY);
+						++loaded;
+						if( loaded === total )
+							callback.call();
 
-      }
+					}).attr( 'src', $el.attr('src') );
 
-      function handle(e) {
+				});
+					
+				$list.hover(function() {
+					$('h2').fadeOut( 800 );
+				}, function() {						
+					$('h2').fadeIn( 800 );
+				});
 
-        var x = e.pageX,
-          y = e.pageY,
-          i = -1,
-          fly = $([]);
+			};
 
-        while (fly[0] = elems[++i]) {
-          fly.triggerHandler('proximity', [x, y]);
-        }
+		return {
+			init	: init
+		};
 
-      }
+	})();
+
+	Photo.init();
     },
 
     Size = function () {
@@ -485,7 +514,7 @@
 
   $(window).resize(function () {
     Size();
-    Tile();
+    Random();
   });
 
 })($);
