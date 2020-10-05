@@ -415,14 +415,14 @@ html body main > header .pe-thumbs li a div.pe-description {
 /* line 356, ../sass/top.scss */
 html body main > header .pe-thumbs li a div.pe-description h3 {
   font-family: 'Impact';
-  font-size: 2em;
+  font-size: 1.5em;
   margin: 0.4em 1em;
   padding: 0;
   text-align: left;
 }
 /* line 364, ../sass/top.scss */
 html body main > header .pe-thumbs li a div.pe-description dl {
-  font-size: 1.5em;
+  font-size: 1.25em;
   padding: 0.5em 1.2em;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   color: #fff;
@@ -440,7 +440,7 @@ html body main > header .pe-thumbs li a div.pe-description dl dt:after {
 html body main > div {
   background: url(../img/common/dot.png) repeat top left, url(../img/top/back2.jpg) no-repeat center center;
   background-size: auto , cover;
-  overflow: hidden;
+  overflow-x: hidden;
   padding: 0 1.5% !important;
   position: relative;
   z-index: 0;

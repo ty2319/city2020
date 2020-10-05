@@ -355,14 +355,14 @@ html {
 								
 								h3 {
 									font-family : 'Impact';
-									font-size 	: 2em;
+									font-size 	: 1.5em;
 									margin 		: 0.4em 1em;
 									padding 	: 0;
 									text-align 	: left;
 								}
 								
 								dl {
-									font-size 	: 1.5em;
+									font-size 	: 1.25em;
 									padding 	: 0.5em 1.2em;
 									border-top 	: 1px solid rgba(255,255,255,0.3);
 									color 	 	: $white;
@@ -385,7 +385,7 @@ html {
 			& > div {
 				background 		 : url(#{$ip}common/dot.png) repeat top left , url(#{$ip}top/back2.jpg) no-repeat center center;
 				background-size	 : auto , cover;
-				overflow		 : hidden;
+				overflow-x		 : hidden;
 				padding		 	 : 0 $max*0.015 !important;
 				position		 : $r;
 				z-index			 : 0;
