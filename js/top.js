@@ -317,7 +317,7 @@
 			// minOpacity / maxOpacity : minimum (set in the CSS) and maximum values for the image's opacity
 			settings	= {
 				maxScale	: 1.3,
-				maxOpacity	: 0.9,
+				maxOpacity	: 1,
 				minOpacity	: Number( $elems.css('opacity') )
 			},
 			init		= function() {
@@ -395,10 +395,10 @@
 					// change the z-index of the element once it reaches the maximum scale value
 					// also, show the description container
 					if( scaleVal === settings.maxScale ) {
-
+									
 						$li.css( 'z-index', 1000 );
 
-						if( $desc.offset().left + $desc.width() > listL + listW ) {
+						if( $desc.offset().left + $desc.width() > listL + listW*1.041 ) {
 
 							$desc.css( 'left', -$desc.width() - $desc.data( 'space_l' ) );
 
@@ -408,9 +408,8 @@
 
 					}	
 					else {
-
+									
 						$li.css( 'z-index', 1 );
-
 						$desc.stop(true,true).hide();
 
 					}	
@@ -445,12 +444,6 @@
 					}).attr( 'src', $el.attr('src') );
 
 				});
-					
-				$list.hover(function() {
-					$('h2').fadeOut( 800 );
-				}, function() {						
-					$('h2').fadeIn( 800 );
-				});
 
 			};
 
@@ -468,12 +461,12 @@
         $('body , html').height($(window).height());
         $('main > header , main > div').height($(window).height() - $('#top').outerHeight() - 56);
         $('#live img').attr('src', 'img/common/live2.gif');
-        $('main dl').removeClass().addClass('fix3');
+        $('main > div > dl').removeClass().addClass('fix3');
 
         if ($(window).width() > 1200) {
           $('#global , main > header , main > div').height($(window).height() - $('#top').outerHeight());
           $('#live img').attr('src', 'img/common/live.gif');
-          $('main dl').removeClass().addClass('fix2');
+          $('main > div > dl').removeClass().addClass('fix2');
         }
 
       } else {
@@ -494,9 +487,9 @@
           }
 
           if (set2 < scrollPosition) {
-            $('main dl').removeClass().addClass('fix');
+            $('main > div > dl').removeClass().addClass('fix');
           } else {
-            $('main dl').removeClass('fix');
+            $('main > div > dl').removeClass('fix');
           }
         });
       }
@@ -515,6 +508,7 @@
   $(window).resize(function () {
     Size();
     Random();
+    Tile();
   });
 
 })($);

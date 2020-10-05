@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* CSS Document */
 /* line 8, ../sass/top.scss */
 html body {
@@ -304,8 +305,6 @@ html body main {
   grid-template: auto / 45% 55%;
   -ms-grid-rows: auto;
   -ms-grid-columns: 45% 55%;
-  overflow-x: hidden;
-  overflow-y: visible !important;
 }
 @media all and (max-width: 1500px) {
   /* line 267, ../sass/top.scss */
@@ -343,35 +342,56 @@ html body main {
     -ms-grid-column-span: 1;
   }
 }
-/* line 304, ../sass/top.scss */
+/* line 302, ../sass/top.scss */
 html body main > header {
   position: relative;
-  overflow: hidden;
-  z-index: 10;
+  z-index: 2;
 }
-/* line 309, ../sass/top.scss */
+/* line 306, ../sass/top.scss */
+html body main > header h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  margin: -115px 0 0 -125px;
+}
+@media all and (max-width: 940px) {
+  /* line 306, ../sass/top.scss */
+  html body main > header h2 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    z-index: 1;
+  }
+}
+@media all and (max-width: 600px) {
+  /* line 306, ../sass/top.scss */
+  html body main > header h2 {
+    margin: -92px 0 0 -75px;
+  }
+}
+/* line 320, ../sass/top.scss */
 html body main > header .pe-thumbs {
   display: flex;
   flex-flow: row wrap;
-  background: transparent url(../images/2.jpg) center center;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  background: fixed url(../img/top/back1.jpg) center center no-repeat;
 }
-/* line 315, ../sass/top.scss */
+/* line 325, ../sass/top.scss */
 html body main > header .pe-thumbs li {
   width: 20%;
 }
 @media all and (max-width: 600px) {
-  /* line 315, ../sass/top.scss */
+  /* line 325, ../sass/top.scss */
   html body main > header .pe-thumbs li {
-    width: 33.33333%;
+    width: 25%;
   }
 }
-/* line 322, ../sass/top.scss */
+/* line 332, ../sass/top.scss */
 html body main > header .pe-thumbs li a {
   display: block;
   position: relative;
 }
-/* line 326, ../sass/top.scss */
+/* line 336, ../sass/top.scss */
 html body main > header .pe-thumbs li a img {
   display: block;
   position: relative;
@@ -379,10 +399,10 @@ html body main > header .pe-thumbs li a img {
   height: auto;
   opacity: 0.2;
 }
-/* line 334, ../sass/top.scss */
+/* line 344, ../sass/top.scss */
 html body main > header .pe-thumbs li a div.pe-description {
   width: 200%;
-  background: rgba(111, 76, 51, 0.8);
+  background: rgba(0, 0, 45, 0.9);
   position: absolute;
   top: 0;
   left: -200%;
@@ -392,30 +412,41 @@ html body main > header .pe-thumbs li a div.pe-description {
   text-align: left;
   font-style: italic;
 }
-/* line 346, ../sass/top.scss */
+/* line 356, ../sass/top.scss */
 html body main > header .pe-thumbs li a div.pe-description h3 {
   font-family: 'Impact';
   font-size: 2em;
-  margin: 0;
+  margin: 0.4em 1em;
+  padding: 0;
+  text-align: left;
 }
-/* line 352, ../sass/top.scss */
-html body main > header .pe-thumbs li a div.pe-description p {
-  padding: 1em;
-  margin: 1em;
+/* line 364, ../sass/top.scss */
+html body main > header .pe-thumbs li a div.pe-description dl {
+  font-size: 1.5em;
+  padding: 0.5em 1.2em;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
 }
-/* line 363, ../sass/top.scss */
+/* line 370, ../sass/top.scss */
+html body main > header .pe-thumbs li a div.pe-description dl dt {
+  float: left;
+  clear: left;
+}
+/* line 374, ../sass/top.scss */
+html body main > header .pe-thumbs li a div.pe-description dl dt:after {
+  content: "：";
+}
+/* line 385, ../sass/top.scss */
 html body main > div {
-  background: url(../img/common/dot.png) repeat top left, url(../img/top/back.jpg) no-repeat center center;
+  background: url(../img/common/dot.png) repeat top left, url(../img/top/back2.jpg) no-repeat center center;
   background-size: auto , cover;
-  overflow-x: hidden;
-  overflow-y: visible !important;
+  overflow: hidden;
   padding: 0 1.5% !important;
   position: relative;
   z-index: 0;
 }
 @media all and (max-width: 1200px) {
-  /* line 363, ../sass/top.scss */
+  /* line 385, ../sass/top.scss */
   html body main > div {
     grid-area: 1 / 2 / 2 / 3;
     -ms-grid-row: 1;
@@ -423,57 +454,133 @@ html body main > div {
   }
 }
 @media all and (max-width: 940px) {
-  /* line 363, ../sass/top.scss */
+  /* line 385, ../sass/top.scss */
   html body main > div {
     grid-area: 2 / 1 / 3 / 2;
     -ms-grid-row: 2;
     -ms-grid-column: 1;
+    z-index: 10;
   }
 }
-/* line 384, ../sass/top.scss */
+/* line 406, ../sass/top.scss */
+html body main > div dl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  color: #fff;
+  text-align: center;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 100%;
+  overflow: hidden;
+}
+/* line 417, ../sass/top.scss */
+html body main > div dl.fix {
+  position: fixed;
+  top: 4em;
+  left: 0;
+  z-index: 10;
+}
+/* line 421, ../sass/top.scss */
+html body main > div dl.fix2 {
+  position: fixed;
+  top: 4em;
+  left: 47.2%;
+  z-index: 10;
+  width: 52.8%;
+}
+/* line 426, ../sass/top.scss */
+html body main > div dl.fix3 {
+  position: fixed;
+  top: 9em;
+  left: 50%;
+  z-index: 10;
+  width: 50%;
+}
+/* line 431, ../sass/top.scss */
+html body main > div dl dt {
+  font-size: 2em;
+  background: rgba(1, 32, 82, 0.8);
+  flex-grow: 2;
+  padding: 0.7em 0.5em 0 0.5em;
+}
+/* line 437, ../sass/top.scss */
+html body main > div dl dt span {
+  font-size: 0.5em;
+  text-align: left;
+}
+/* line 443, ../sass/top.scss */
+html body main > div dl dd {
+  font-size: 0.9em;
+  color: #b3b3b3;
+  border-left: rgba(255, 255, 255, 0.4) 1px solid;
+  background: rgba(1, 32, 82, 0.8);
+  min-width: 5em;
+  padding: 0 0.5em;
+  /*&:hover,*/
+}
+/* line 451, ../sass/top.scss */
+html body main > div dl dd.day {
+  cursor: pointer;
+  color: #fff;
+}
+/* line 457, ../sass/top.scss */
+html body main > div dl dd.current {
+  background: none;
+  color: #fff;
+  text-shadow: -1px -1px 3px #000, 1px 1px 3px #000;
+}
+/* line 464, ../sass/top.scss */
+html body main > div dl span {
+  font-size: 0.8em;
+}
+/* line 469, ../sass/top.scss */
 html body main > div #timer {
   margin-top: -3em;
   text-align: center;
   font-weight: bold;
 }
-/* line 389, ../sass/top.scss */
+/* line 474, ../sass/top.scss */
 html body main > div #timer .yycountdown-box {
   margin-top: 1em;
   color: #012052;
   text-shadow: -1px -1px 3px #fff, 1px 1px 3px #fff;
 }
-/* line 394, ../sass/top.scss */
+/* line 479, ../sass/top.scss */
 html body main > div #timer .yycountdown-box .yyc-day, html body main > div #timer .yycountdown-box .yyc-hou, html body main > div #timer .yycountdown-box .yyc-min, html body main > div #timer .yycountdown-box .yyc-sec {
   font-size: 3em;
 }
-/* line 400, ../sass/top.scss */
+/* line 485, ../sass/top.scss */
 html body main > div article {
   display: flex;
   flex-flow: row wrap;
   width: 500%;
   background: none;
 }
-/* line 406, ../sass/top.scss */
+/* line 491, ../sass/top.scss */
 html body main > div article > section {
   width: 20%;
   background: none !important;
   padding: 0 !important;
   margin: 0 !important;
 }
-/* line 412, ../sass/top.scss */
+/* line 497, ../sass/top.scss */
 html body main > div article > section img {
   width: 80%;
   height: auto;
   display: block;
   margin: 15em auto 3em auto;
 }
-/* line 419, ../sass/top.scss */
+/* line 504, ../sass/top.scss */
 html body main > div article > section p {
   padding: 2em;
   color: #fff;
   text-shadow: -1px -1px 3px #000, 1px 1px 3px #000;
 }
-/* line 425, ../sass/top.scss */
+/* line 510, ../sass/top.scss */
 html body main > div article > section ol {
   display: flex;
   flex-flow: row wrap;
@@ -482,7 +589,7 @@ html body main > div article > section ol {
   width: 100%;
   margin-bottom: 6em;
 }
-/* line 436, ../sass/top.scss */
+/* line 521, ../sass/top.scss */
 html body main > div article > section a button {
   color: #333333;
   background-color: #fff;
@@ -497,101 +604,26 @@ html body main > div article > section a button {
   width: 40%;
   min-width: 250px;
 }
-/* line 450, ../sass/top.scss */
+/* line 535, ../sass/top.scss */
 html body main > div article > section a button:hover {
   opacity: 1;
 }
-/* line 454, ../sass/top.scss */
+/* line 539, ../sass/top.scss */
 html body main > div article > section a button span {
   margin-right: 1em;
 }
-/* line 463, ../sass/top.scss */
-html body main dl {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  display: flex;
-  flex-flow: row nowrap;
-  color: #fff;
-  text-align: center;
-  align-items: stretch;
-  justify-content: space-between;
-  width: 100%;
-  overflow: hidden;
-}
-/* line 474, ../sass/top.scss */
-html body main dl.fix {
-  position: fixed;
-  top: 4em;
-  left: 0;
-  z-index: 10;
-}
-/* line 478, ../sass/top.scss */
-html body main dl.fix2 {
-  position: fixed;
-  top: 4em;
-  left: 47.2%;
-  z-index: 10;
-  width: 52.8%;
-}
-/* line 483, ../sass/top.scss */
-html body main dl.fix3 {
-  position: fixed;
-  top: 9em;
-  left: 50%;
-  z-index: 10;
-  width: 50%;
-}
-/* line 488, ../sass/top.scss */
-html body main dl dt {
-  font-size: 2em;
-  background: rgba(1, 32, 82, 0.8);
-  flex-grow: 2;
-  padding: 0.7em 0.5em 0 0.5em;
-}
-/* line 494, ../sass/top.scss */
-html body main dl dt span {
-  font-size: 0.5em;
-  text-align: left;
-}
-/* line 500, ../sass/top.scss */
-html body main dl dd {
-  font-size: 0.9em;
-  color: #b3b3b3;
-  border-left: rgba(255, 255, 255, 0.4) 1px solid;
-  background: rgba(1, 32, 82, 0.8);
-  min-width: 5em;
-  padding: 0 0.5em;
-  /*&:hover,*/
-}
-/* line 508, ../sass/top.scss */
-html body main dl dd.day {
-  cursor: pointer;
-  color: #fff;
-}
-/* line 514, ../sass/top.scss */
-html body main dl dd.current {
-  background: none;
-  color: #fff;
-  text-shadow: -1px -1px 3px #000, 1px 1px 3px #000;
-}
-/* line 521, ../sass/top.scss */
-html body main dl span {
-  font-size: 0.8em;
-}
-/* line 527, ../sass/top.scss */
+/* line 549, ../sass/top.scss */
 html body #pagetop {
   display: none;
 }
 @media all and (max-width: 940px) {
-  /* line 527, ../sass/top.scss */
+  /* line 549, ../sass/top.scss */
   html body #pagetop {
     display: block;
   }
 }
 @media all and (max-width: 1500px) {
-  /* line 535, ../sass/top.scss */
+  /* line 557, ../sass/top.scss */
   html body footer {
     grid-area: 3 / 3 / 4 / 4;
     -ms-grid-row: 3;
@@ -600,7 +632,7 @@ html body #pagetop {
   }
 }
 @media all and (max-width: 1200px) {
-  /* line 535, ../sass/top.scss */
+  /* line 557, ../sass/top.scss */
   html body footer {
     grid-area: 4 / 2 / 5 / 3;
     -ms-grid-row: 4;
@@ -608,30 +640,30 @@ html body #pagetop {
   }
 }
 @media all and (max-width: 940px) {
-  /* line 535, ../sass/top.scss */
+  /* line 557, ../sass/top.scss */
   html body footer {
     grid-area: 4 / 1 / 5 / 2;
     -ms-grid-row: 4;
     -ms-grid-column: 1;
   }
 }
-/* line 559, ../sass/top.scss */
+/* line 581, ../sass/top.scss */
 html body#nf_title main {
   overflow-y: hidden !important;
 }
-/* line 562, ../sass/top.scss */
+/* line 584, ../sass/top.scss */
 html body#nf_title main div {
   padding: 0 !important;
 }
 @media all and (max-width: 940px) {
-  /* line 559, ../sass/top.scss */
+  /* line 581, ../sass/top.scss */
   html body#nf_title main {
     grid-template: auto 50em / 100%;
     -ms-grid-rows: auto 50em;
     -ms-grid-columns: 100%;
   }
 }
-/* line 572, ../sass/top.scss */
+/* line 594, ../sass/top.scss */
 html body#nf_title main h3 {
   margin-top: 8em;
 }

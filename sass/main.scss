@@ -87,28 +87,27 @@ main {
 		}
 
 		h2 {
-			width: 40%;
-			@include abT(1em,3%,2);
+			@include abT(28%,50%,0);
+			margin: -115px 0 0 -125px;		
 			
 			@include media($of) {
-				@include abT(0.5em,3%,2);
-			}
+				@include abT(23%,50%,0);
+			}		
 			
 			@include media($ot) {
-				@include abT(0.5em,1.5%,2);
+				@include abT(30%,50%,0);
+			}
+			
+			@include media($six) {
+				margin: -50px 0 0 -75px;
 			}
 			
 			img {
-				width 	 : $max;
-				min-width: 250px;
+				width	 : 250px;
 				height	 : auto;
 			
-				@include media($ot) {
-					max-width: 300px;
-				}
-			
 				@include media($six) {
-					min-width: 180px;
+					width: 150px;
 				}
 			}
 		}
