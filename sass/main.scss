@@ -57,7 +57,7 @@ main {
 		z-index				: 0;
 		position 			: $r;
 		
-		@for $value from 1 through 12 {
+		@for $value from 1 through 13 {
 				
 			&.bg#{$value} {
 			

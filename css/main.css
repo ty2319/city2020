@@ -105,6 +105,10 @@ main > header.bg11 {
 main > header.bg12 {
   background-image: url(../img/common/12.jpg);
 }
+/* line 62, ../sass/main.scss */
+main > header.bg13 {
+  background-image: url(../img/common/13.jpg);
+}
 /* line 72, ../sass/main.scss */
 main > header.fix {
   position: fixed;

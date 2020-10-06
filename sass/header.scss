@@ -13,6 +13,7 @@ header#top {
 	-ms-grid-column		: 1;
 	-ms-grid-column-span: 3;
 	align-items			: center;
+	z-index 			: 22;
 	
 	@include media($of) {
 		grid-area			: 1 / 1 / 2 / 3;
