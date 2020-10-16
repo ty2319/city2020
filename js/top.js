@@ -400,9 +400,9 @@
 					// also, show the description container
 					if( scaleVal === settings.maxScale ) {
 									
-						$li.css( 'z-index', 20 );
+						$li.css( 'z-index', 1000 );
 
-						if( $desc.offset().left + $desc.width() > listL + listW*1.041 ) {
+						if( $li.offset().left >= listW/2 ) {
 
 							$desc.css( 'left', -$desc.width() - $desc.data( 'space_l' ) );
 
@@ -410,8 +410,7 @@
 
 						$desc.fadeIn( 800 );
 
-					}	
-					else {
+					} else {
 									
 						$li.css( 'z-index', 1 );
 						$desc.stop(true,true).hide();
@@ -476,6 +475,9 @@
       } else {
         $('#live img').attr('src', 'img/common/live2.gif');
         $('main > header').outerHeight($(window).height() - $('#top').outerHeight() - $('#global').height());
+		$('#pe-thumbs li a').each(function() {
+			$(this).replaceWith('<div>' + $(this).html() +'</div>');
+		})
 
         //スクロールした時の処理
         $(window).scroll(function () {
@@ -511,8 +513,6 @@
 
   $(window).resize(function () {
     Size();
-    Random();
-    Tile();
   });
 
 })($);

@@ -61,7 +61,7 @@ html body #global .menu-trigger {
 @media all and (max-width: 1200px) {
   /* line 56, ../sass/top.scss */
   html body #global.fix {
-    z-index: 21;
+    z-index: 24;
   }
   /* line 63, ../sass/top.scss */
   html body #global.fix > dl .menu-trigger {
@@ -345,7 +345,7 @@ html body main {
 /* line 302, ../sass/top.scss */
 html body main > header {
   position: relative;
-  z-index: 2;
+  z-index: 23;
 }
 /* line 306, ../sass/top.scss */
 html body main > header h2 {
@@ -387,66 +387,67 @@ html body main > header .pe-thumbs li {
   }
 }
 /* line 332, ../sass/top.scss */
-html body main > header .pe-thumbs li a {
+html body main > header .pe-thumbs li a, html body main > header .pe-thumbs li div {
   display: block;
   position: relative;
+  width: 100%;
 }
-/* line 336, ../sass/top.scss */
-html body main > header .pe-thumbs li a img {
+/* line 337, ../sass/top.scss */
+html body main > header .pe-thumbs li a img, html body main > header .pe-thumbs li div img {
   display: block;
   position: relative;
   width: 100%;
   height: auto;
   opacity: 0.2;
 }
-/* line 344, ../sass/top.scss */
-html body main > header .pe-thumbs li a div.pe-description {
+/* line 345, ../sass/top.scss */
+html body main > header .pe-thumbs li a div.pe-description, html body main > header .pe-thumbs li div div.pe-description {
   width: 200%;
   background: rgba(0, 0, 45, 0.9);
   position: absolute;
   top: 0;
-  left: -200%;
+  left: 100%;
   color: #fff;
   display: none;
   z-index: 1001;
   text-align: left;
   font-style: italic;
 }
-/* line 356, ../sass/top.scss */
-html body main > header .pe-thumbs li a div.pe-description h3 {
+/* line 357, ../sass/top.scss */
+html body main > header .pe-thumbs li a div.pe-description h3, html body main > header .pe-thumbs li div div.pe-description h3 {
   font-family: 'Impact';
   font-size: 1.5em;
   margin: 0.4em 1em;
   padding: 0;
   text-align: left;
 }
-/* line 364, ../sass/top.scss */
-html body main > header .pe-thumbs li a div.pe-description dl {
+/* line 365, ../sass/top.scss */
+html body main > header .pe-thumbs li a div.pe-description dl, html body main > header .pe-thumbs li div div.pe-description dl {
   font-size: 1.25em;
   padding: 0.5em 1.2em;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   color: #fff;
 }
-/* line 370, ../sass/top.scss */
-html body main > header .pe-thumbs li a div.pe-description dl dt {
+/* line 371, ../sass/top.scss */
+html body main > header .pe-thumbs li a div.pe-description dl dt, html body main > header .pe-thumbs li div div.pe-description dl dt {
   float: left;
   clear: left;
 }
-/* line 374, ../sass/top.scss */
-html body main > header .pe-thumbs li a div.pe-description dl dt:after {
+/* line 375, ../sass/top.scss */
+html body main > header .pe-thumbs li a div.pe-description dl dt:after, html body main > header .pe-thumbs li div div.pe-description dl dt:after {
   content: "：";
 }
-/* line 385, ../sass/top.scss */
+/* line 386, ../sass/top.scss */
 html body main > div {
   background: url(../img/common/dot.png) repeat top left, url(../img/top/back2.jpg) no-repeat center center;
   background-size: auto , cover;
   overflow-x: hidden;
   padding: 0 1.5% !important;
   position: relative;
-  z-index: 0;
+  z-index: 22;
 }
 @media all and (max-width: 1200px) {
-  /* line 385, ../sass/top.scss */
+  /* line 386, ../sass/top.scss */
   html body main > div {
     grid-area: 1 / 2 / 2 / 3;
     -ms-grid-row: 1;
@@ -454,15 +455,15 @@ html body main > div {
   }
 }
 @media all and (max-width: 940px) {
-  /* line 385, ../sass/top.scss */
+  /* line 386, ../sass/top.scss */
   html body main > div {
     grid-area: 2 / 1 / 3 / 2;
     -ms-grid-row: 2;
     -ms-grid-column: 1;
-    z-index: 10;
+    z-index: 23;
   }
 }
-/* line 406, ../sass/top.scss */
+/* line 407, ../sass/top.scss */
 html body main > div dl {
   position: absolute;
   top: 0;
@@ -477,14 +478,14 @@ html body main > div dl {
   width: 100%;
   overflow: hidden;
 }
-/* line 417, ../sass/top.scss */
+/* line 418, ../sass/top.scss */
 html body main > div dl.fix {
   position: fixed;
   top: 4em;
   left: 0;
   z-index: 10;
 }
-/* line 421, ../sass/top.scss */
+/* line 422, ../sass/top.scss */
 html body main > div dl.fix2 {
   position: fixed;
   top: 4em;
@@ -492,7 +493,7 @@ html body main > div dl.fix2 {
   z-index: 10;
   width: 52.8%;
 }
-/* line 426, ../sass/top.scss */
+/* line 427, ../sass/top.scss */
 html body main > div dl.fix3 {
   position: fixed;
   top: 9em;
@@ -500,19 +501,19 @@ html body main > div dl.fix3 {
   z-index: 10;
   width: 50%;
 }
-/* line 431, ../sass/top.scss */
+/* line 432, ../sass/top.scss */
 html body main > div dl dt {
   font-size: 2em;
   background: rgba(1, 32, 82, 0.8);
   flex-grow: 2;
   padding: 0.7em 0.5em 0 0.5em;
 }
-/* line 437, ../sass/top.scss */
+/* line 438, ../sass/top.scss */
 html body main > div dl dt span {
   font-size: 0.5em;
   text-align: left;
 }
-/* line 443, ../sass/top.scss */
+/* line 444, ../sass/top.scss */
 html body main > div dl dd {
   font-size: 0.9em;
   color: #b3b3b3;
@@ -522,65 +523,65 @@ html body main > div dl dd {
   padding: 0 0.5em;
   /*&:hover,*/
 }
-/* line 451, ../sass/top.scss */
+/* line 452, ../sass/top.scss */
 html body main > div dl dd.day {
   cursor: pointer;
   color: #fff;
 }
-/* line 457, ../sass/top.scss */
+/* line 458, ../sass/top.scss */
 html body main > div dl dd.current {
   background: none;
   color: #fff;
   text-shadow: -1px -1px 3px #000, 1px 1px 3px #000;
 }
-/* line 464, ../sass/top.scss */
+/* line 465, ../sass/top.scss */
 html body main > div dl span {
   font-size: 0.8em;
 }
-/* line 469, ../sass/top.scss */
+/* line 470, ../sass/top.scss */
 html body main > div #timer {
   margin-top: -3em;
   text-align: center;
   font-weight: bold;
 }
-/* line 474, ../sass/top.scss */
+/* line 475, ../sass/top.scss */
 html body main > div #timer .yycountdown-box {
   margin-top: 1em;
   color: #012052;
   text-shadow: -1px -1px 3px #fff, 1px 1px 3px #fff;
 }
-/* line 479, ../sass/top.scss */
+/* line 480, ../sass/top.scss */
 html body main > div #timer .yycountdown-box .yyc-day, html body main > div #timer .yycountdown-box .yyc-hou, html body main > div #timer .yycountdown-box .yyc-min, html body main > div #timer .yycountdown-box .yyc-sec {
   font-size: 3em;
 }
-/* line 485, ../sass/top.scss */
+/* line 486, ../sass/top.scss */
 html body main > div article {
   display: flex;
   flex-flow: row wrap;
   width: 500%;
   background: none;
 }
-/* line 491, ../sass/top.scss */
+/* line 492, ../sass/top.scss */
 html body main > div article > section {
   width: 20%;
   background: none !important;
   padding: 0 !important;
   margin: 0 !important;
 }
-/* line 497, ../sass/top.scss */
+/* line 498, ../sass/top.scss */
 html body main > div article > section img {
   width: 80%;
   height: auto;
   display: block;
   margin: 15em auto 3em auto;
 }
-/* line 504, ../sass/top.scss */
+/* line 505, ../sass/top.scss */
 html body main > div article > section p {
   padding: 2em;
   color: #fff;
   text-shadow: -1px -1px 3px #000, 1px 1px 3px #000;
 }
-/* line 510, ../sass/top.scss */
+/* line 511, ../sass/top.scss */
 html body main > div article > section ol {
   display: flex;
   flex-flow: row wrap;
@@ -589,7 +590,7 @@ html body main > div article > section ol {
   width: 100%;
   margin-bottom: 6em;
 }
-/* line 521, ../sass/top.scss */
+/* line 522, ../sass/top.scss */
 html body main > div article > section a button {
   color: #333333;
   background-color: #fff;
@@ -604,26 +605,30 @@ html body main > div article > section a button {
   width: 40%;
   min-width: 250px;
 }
-/* line 535, ../sass/top.scss */
+/* line 536, ../sass/top.scss */
 html body main > div article > section a button:hover {
   opacity: 1;
 }
-/* line 539, ../sass/top.scss */
+/* line 540, ../sass/top.scss */
 html body main > div article > section a button span {
   margin-right: 1em;
 }
-/* line 549, ../sass/top.scss */
+/* line 550, ../sass/top.scss */
 html body #pagetop {
   display: none;
 }
 @media all and (max-width: 940px) {
-  /* line 549, ../sass/top.scss */
+  /* line 550, ../sass/top.scss */
   html body #pagetop {
     display: block;
   }
 }
+/* line 558, ../sass/top.scss */
+html body footer {
+  z-index: 23;
+}
 @media all and (max-width: 1500px) {
-  /* line 557, ../sass/top.scss */
+  /* line 558, ../sass/top.scss */
   html body footer {
     grid-area: 3 / 3 / 4 / 4;
     -ms-grid-row: 3;
@@ -632,7 +637,7 @@ html body #pagetop {
   }
 }
 @media all and (max-width: 1200px) {
-  /* line 557, ../sass/top.scss */
+  /* line 558, ../sass/top.scss */
   html body footer {
     grid-area: 4 / 2 / 5 / 3;
     -ms-grid-row: 4;
@@ -640,32 +645,51 @@ html body #pagetop {
   }
 }
 @media all and (max-width: 940px) {
-  /* line 557, ../sass/top.scss */
+  /* line 558, ../sass/top.scss */
   html body footer {
     grid-area: 4 / 1 / 5 / 2;
     -ms-grid-row: 4;
     -ms-grid-column: 1;
   }
 }
-/* line 581, ../sass/top.scss */
+/* line 583, ../sass/top.scss */
 html body#nf_title main {
   overflow-y: hidden !important;
 }
-/* line 584, ../sass/top.scss */
+/* line 588, ../sass/top.scss */
+html body#nf_title main header h2 {
+  margin-top: -35%;
+}
+@media all and (max-width: 1500px) {
+  /* line 588, ../sass/top.scss */
+  html body#nf_title main header h2 {
+    margin-top: -40%;
+  }
+}
+/* line 597, ../sass/top.scss */
+html body#nf_title main header h3 {
+  margin-top: 11em;
+}
+/* line 602, ../sass/top.scss */
 html body#nf_title main div {
   padding: 0 !important;
 }
 @media all and (max-width: 940px) {
-  /* line 581, ../sass/top.scss */
+  /* line 583, ../sass/top.scss */
   html body#nf_title main {
     grid-template: auto 50em / 100%;
     -ms-grid-rows: auto 50em;
     -ms-grid-columns: 100%;
   }
-}
-/* line 594, ../sass/top.scss */
-html body#nf_title main h3 {
-  margin-top: 8em;
+  /* line 611, ../sass/top.scss */
+  html body#nf_title main header {
+    overflow: visible !important;
+    height: auto !important;
+  }
+  /* line 615, ../sass/top.scss */
+  html body#nf_title main header h2 {
+    margin-top: -20%;
+  }
 }
 
 /*# sourceMappingURL=top.css.map */

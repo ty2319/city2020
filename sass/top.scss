@@ -56,7 +56,7 @@ html {
 			&.fix {
 
 				@include media($ot) {
-					z-index: 21;
+					z-index: 24;
 					
 					& > dl {
 					
@@ -301,7 +301,7 @@ html {
 
 			& > header {
 				position: $r;
-				z-index : 2;
+				z-index : 23;
 				
 				h2 {
 					
@@ -329,9 +329,10 @@ html {
 							width: $max / 4;
 						}
 						
-						a {
+						a , div {
 							display : block;
 							position: relative;
+							width 	: $max;
 							
 							img {
 								display : block;
@@ -346,7 +347,7 @@ html {
 								background 	: rgba(0,0,45,0.9);
 								position 	: absolute;
 								top 		: 0;
-								left 		: -$max * 2;
+								left 		: $max;
 								color 		: $white;
 								display 	: none;
 								z-index 	: 1001;
@@ -388,7 +389,7 @@ html {
 				overflow-x		 : hidden;
 				padding		 	 : 0 $max*0.015 !important;
 				position		 : $r;
-				z-index			 : 0;
+				z-index			 : 22;
 
 				@include media($ot) {
 					grid-area		: 1 / 2 / 2 / 3;
@@ -400,7 +401,7 @@ html {
 					grid-area		: 2 / 1 / 3 / 2;
 					-ms-grid-row	: 2;
 					-ms-grid-column	: 1;
-					z-index			: 10;
+					z-index			: 23;
 				}
 
 				dl {
@@ -555,6 +556,7 @@ html {
 		}
 
 		footer {
+			z-index: 23;
 
 			@include media($of) {
 				grid-area		: 3 / 3 / 4 / 4;
@@ -581,6 +583,22 @@ html {
 			main {
 				overflow-y: hidden !important;
 				
+				header {
+					
+					h2 {
+						margin-top: -35%;
+
+						@include media($of) {
+							margin-top: -40%;
+						}
+						
+					}
+					
+					h3 {
+						margin-top: 11em;
+					}
+				}
+
 				div {
 					padding: 0 !important;
 				}
@@ -589,10 +607,15 @@ html {
 					grid-template	: auto 50em / 100%;
 					-ms-grid-rows	: auto 50em;
 					-ms-grid-columns: 100%;
-				}
-				
-				h3 {
-					margin-top: 8em;
+			
+					header {
+						overflow: visible !important;
+						height 	: auto !important;
+					
+						h2 {
+							margin-top: -20%;
+						}
+					}
 				}
 			}
 		}

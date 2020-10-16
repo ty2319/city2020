@@ -8,7 +8,7 @@ footer {
   -ms-grid-row: 3;
   -ms-grid-column: 3;
   position: relative;
-  z-index: 1;
+  z-index: 0;
 }
 @media all and (max-width: 1500px) {
   /* line 6, ../sass/footer.scss */
@@ -39,3 +39,5 @@ footer ul {
 footer ul a {
   color: #FFF;
 }
+
+/*# sourceMappingURL=footer.css.map */

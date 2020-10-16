@@ -44,7 +44,7 @@ $count_ini = pg_fetch_result($rs1,0,0);
 <meta property="og:title" content="第91回都市対抗野球大会" />
 <meta property="og:description" content="社会人野球
 第91回都市対抗野球大会での、NTT西日本の試合経過です。" />
-<meta property="og:url" content="http://www.ntt-west.co.jp/symbol/hp/baseball/games/2019/city/" />
+<meta property="og:url" content="http://www.ntt-west.co.jp/symbol/hp/baseball/games/2020/city/" />
 <meta property="og:site_name" content="第91回都市対抗野球大会" />
 <meta property="og:country-name" content="Japan,日本" />
 <meta property="og:locality" content="Osaka,大阪" />
