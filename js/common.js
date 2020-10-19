@@ -196,7 +196,7 @@
 			var links	= $(this);
 			var href	= links.attr('href');
 			
-			if(href.match('japan') && href.match(loc)) {
+			if(href.match('city') && href.match(loc)) {
 				$(this).addClass('active');
 			}
 		});

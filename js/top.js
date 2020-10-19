@@ -194,7 +194,7 @@
         var links = $(this),
           href = links.attr('href');
 
-        if (href.match('japan') && href.match(loc)) {
+        if (href.match('city') && href.match(loc)) {
           $(this).addClass('active');
         }
       });
@@ -236,8 +236,8 @@
 
           Push.Permission.request();
 
-          Push.create('日本選手権 2019', {
-            body: '1回戦の試合結果、ギャラリー、ヒーローインタビューを公開しました。',
+          Push.create('都市対抗 2020', {
+            body: '都市対抗 2020特設サイトを公開しました。',
             icon: 'icon.gif',
             timeout: 8000, // 通知が消えるタイミング
             vibrate: [100, 100, 100], // モバイル端末でのバイブレーション秒数
