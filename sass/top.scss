@@ -360,6 +360,10 @@ html {
 									margin 		: 0.4em 1em;
 									padding 	: 0;
 									text-align 	: left;
+				
+									@include media($six) {
+										margin-left: 1.5em;
+									}
 								}
 								
 								dl {
@@ -367,6 +371,10 @@ html {
 									padding 	: 0.5em 1.2em;
 									border-top 	: 1px solid rgba(255,255,255,0.3);
 									color 	 	: $white;
+				
+									@include media($six) {
+										padding-left: 2.2em;
+									}
 									
 									dt {
 										float: left;
