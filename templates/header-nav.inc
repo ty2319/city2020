@@ -23,7 +23,7 @@
 					<dd class="results"><!--<a href="/symbol/hp/baseball/games/2020/city/results.html">--><span class="fa fa-list-ol"></span>試合結果<i>Results</i><!--</a>--></dd>
 					<dd class="gallery"><!--<a href="/symbol/hp/baseball/games/2020/city/gallery.html">--><span class="fa fa-camera"></span>ギャラリー<i>Photo gallery</i><!--</a>--></dd>
 					<dd class="aid"><!--<a href="/symbol/hp/baseball/games/2020/city/aid.html">--><span class="fa fa-volume-up"></span>応援ガイド<i>Guidance of aid</i> … 球場応援禁止<!--</a>--></dd>
-					<dd class="access"><a href="/symbol/hp/baseball/games/2020/city/access.html"><span class="fa fa-map-marker"></span>アクセスガイド<i>Guidance to a stadium</i> </a></dd>
+					<!--<dd class="access"><a href="/symbol/hp/baseball/games/2020/city/access.html"><span class="fa fa-map-marker"></span>アクセスガイド<i>Guidance to a stadium</i> </a></dd>-->
 				</dl>
 			</dd>
 			<dd>
