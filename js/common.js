@@ -90,6 +90,9 @@
 			$('i' , this).text('close');
 			$('.menu-trigger .new').hide();
 			$('#global').nextAll().addClass('menu_open');
+			$('main header').stop().animate({
+			  opacity: 0
+			}, 500);
 			
 			op = 1;
 			
@@ -114,6 +117,10 @@
 					$('#global > dl > dd:not(#live)').stop().animate({top: '-205vw' , left: 0} , 800);
 					$('#live img').fadeIn();
 				}
+			
+				$('main header').stop().animate({
+				  opacity: 1
+				}, 500);
 				
 				$('.menu-trigger.on').removeClass('on');
 				$('#global').nextAll().removeClass('menu_open');
@@ -131,6 +138,9 @@
 				$(this).removeClass('on');
 				$('.menu-trigger i').text('menu');
 				$('.menu-trigger .new').show();
+				$('main header').stop().animate({
+				  opacity: 1
+				}, 500);
 				
 				if ($(window).width() > 1500) {	
 					setTimeout(function(){
@@ -152,6 +162,9 @@
 				$(this).addClass('on');
 				$('.menu-trigger i').text('close');
 				$('.menu-trigger .new').hide();
+				$('main header').stop().animate({
+				  opacity: 0
+				}, 500);
 				
 				if ($(window).width() > 1500) {
 					$('#global > dl > dd:not(#live)').stop().animate({left: 0 , top: 0} , 500);
@@ -316,9 +329,9 @@
 			}
 			
 			if (scrollPosition >= $(document).height() - $(window).height() - $('footer ul').height()) {
-				$('#pan').css('position' , 'absolute');
+				$('#pan').css({'position' : 'absolute' , 'bottom' : $('footer').height()});
 			} else {
-				$('#pan').css('position' , 'fixed');
+				$('#pan').css({'position' : 'fixed' , 'bottom' : 0});
 			}
 			
 			startPosition = scrollPosition;

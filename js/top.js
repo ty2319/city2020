@@ -57,7 +57,10 @@
         $('i', this).text('close');
         $('.menu-trigger .new').hide();
         $('#global').nextAll().addClass('menu_open');
-		$('main header').fadeOut();
+		$('main header').stop().animate({
+		  opacity: 0
+		}, 500);
+		  
         op = 1;
 
       }, function () {
@@ -89,7 +92,9 @@
             $('#live img').fadeIn();
           }
 			
-		  $('main header').fadeIn();
+		  $('main header').stop().animate({
+              opacity: 1
+            }, 500);
           $('.menu-trigger.on').removeClass('on');
           $('#global').nextAll().removeClass('menu_open');
           $('.menu-trigger i').text('menu');
@@ -106,7 +111,9 @@
           $(this).removeClass('on');
           $('.menu-trigger i').text('menu');
           $('.menu-trigger .new').show();
-		  $('main header').fadeIn();
+		  $('main header').stop().animate({
+              opacity: 1
+            }, 500);
 
           if ($(window).width() > 1200) {
             setTimeout(function () {
@@ -135,7 +142,9 @@
           $(this).addClass('on');
           $('.menu-trigger i').text('close');
           $('.menu-trigger .new').hide();	
-		  $('main header').fadeOut();
+		  $('main header').stop().animate({
+              opacity: 0
+            }, 500);
 
           if ($(window).width() > 1200) {
             $('#global > dl > dd:not(#live)').stop().animate({
@@ -252,7 +261,7 @@
     Timer = function () {
 
       $('#timer').yycountdown({
-        endDateTime: '2019/11/02 09:00:00', //カウントダウン終了日時
+        endDateTime: '2020/11/23 14:00:00', //カウントダウン終了日時
         unit: {
           d: '日 ',
           h: '時間 ',
@@ -377,12 +386,19 @@
 						space_t = ( img_n_h - img_h ) / 2,
 						space_l = ( img_n_w - img_w ) / 2;
 
-					$el.data( 'space_l', space_l ).css({
-						height	: img_n_h,
-						top		: -space_t,
-						left	: img_n_w - space_l
-					});
-
+					if($(window).width() > 600) {
+						$el.data( 'space_l', space_l ).css({
+							height	: img_n_h,
+							top		: -space_t,
+							left	: img_n_w - space_l
+						});
+					} else {
+						$el.data( 'space_l', space_l ).css({
+							height	: img_n_h,
+							top		: 0,
+							left	: img_n_w - space_l
+						});
+					}
 				});
 
 			},
@@ -402,10 +418,12 @@
 									
 						$li.css( 'z-index', 1000 );
 
+						if($(window).width() < 600) {
+							$el.css('transform-origin' , 'center top');
+						}
+
 						if( $li.offset().left >= listW/2 ) {
-
-							$desc.css( 'left', -$desc.width() - $desc.data( 'space_l' ) );
-
+							$desc.css( 'left', -$desc.width() - $desc.data( 'space_l' ) );	
 						}
 
 						$desc.fadeIn( 800 );
@@ -425,7 +443,6 @@
 						'transform'			: scaleExp,
 						'opacity'			: ( proximity * ( settings.maxOpacity - settings.minOpacity ) + settings.minOpacity )
 					});
-
 				});
 
 			},

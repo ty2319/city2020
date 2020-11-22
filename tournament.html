@@ -73,6 +73,16 @@
 		  skipConsolationRound: true
 		});
 		
+		if($(window).width() > 1500) {
+			$('div.jQBracket .round:nth-child(1) .match:nth-child(1) .team:nth-child(2) .label , div.jQBracket .round:nth-child(1) .match:nth-child(16) .team:nth-child(1) .label').css('font-size' , '0.7em');
+		} else if ($(window).width() > 1200) {
+			$('div.jQBracket .round:nth-child(1) .match:nth-child(1) .team:nth-child(2) .label , div.jQBracket .round:nth-child(1) .match:nth-child(16) .team:nth-child(1) .label').css('font-size' , '0.8em');
+		} else if ($(window).width() > 600) {
+			$('div.jQBracket .round:nth-child(1) .match:nth-child(1) .team:nth-child(2) .label , div.jQBracket .round:nth-child(1) .match:nth-child(16) .team:nth-child(1) .label').css('font-size' , '0.9em');
+		} else {
+			$('div.jQBracket .round:nth-child(1) .match:nth-child(1) .team:nth-child(2) .label , div.jQBracket .round:nth-child(1) .match:nth-child(16) .team:nth-child(1) .label').css('font-size' , '1em');
+		} 
+		
 		$('div.jQBracket .round:nth-child(1) .match:nth-child(4) .team:nth-child(2)').addClass('west');
 		
 		$('div.jQBracket .round:nth-child(1) .match:nth-child(16) .team:nth-child(2)').addClass('east');

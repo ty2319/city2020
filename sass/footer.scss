@@ -11,7 +11,7 @@ footer {
 	-ms-grid-row	: 3;
 	-ms-grid-column	: 3;
 	position		: $r;
-	z-index			: 0;
+	z-index			: 2;
 	
 	@include media($of) {
 		grid-area			: 4 / 2 / 5 / 3;

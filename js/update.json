@@ -1,50 +1,50 @@
 ﻿[
     {
     "class": "index",
-    "date" : "2019-11-02"
+    "date" : "2020-10-27"
   },
   {
     "class": "tournament",
-    "date" : "2019-11-06"
+    "date" : "2020-10-27"
   },
   {
     "class": "results",
-    "date" : "2019-11-02"
+    "date" : "2020-10-02"
   },
   {
     "class": "gallery",
-    "date" : "2019-11-02"
+    "date" : "2020-10-02"
   },
   {
     "class": "aid",
-    "date" : "2019-10-07"
+    "date" : "2020-10-07"
   },
   {
     "class": "access",
-    "date" : "2019-10-02"
+    "date" : "2020-10-02"
   },
   {
     "class": "addition",
-    "date" : "2018-06-25"
+    "date" : "2020-10-27"
   },
   {
     "class": "mascot",
-    "date" : "2019-11-14"
+    "date" : "2020-10-14"
   },
   {
     "class": "hero",
-    "date" : "2019-10-30"
+    "date" : "2020-10-10"
   },
   {
     "class": "history",
-    "date" : "2019-10-02"
+    "date" : "2020-10-27"
   },
   {
     "class": "past",
-    "date" : "2019-10-02"
+    "date" : "2020-10-27"
   },
   {
     "class": "scoreboard",
-    "date" : "2019-11-02"
+    "date" : "2020-10-02"
   }
 ]

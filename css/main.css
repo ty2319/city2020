@@ -254,10 +254,7 @@ main > article, main > div {
 }
 /* line 180, ../sass/main.scss */
 main > article #pan, main > div #pan {
-  position: fixed;
-  bottom: 0;
   right: 0;
-  z-index: 1;
   display: none;
   padding: 0.5em;
   width: 100%;

@@ -52,8 +52,8 @@ div.jQBracket{
 @media screen and (max-width: 850px) {
 	div.jQBracket .bracket {
 		transform: scale(0.8,0.8);
-		margin-left: -8em !important;
-		margin-top: -10em;
+		margin-left: -7em !important;
+		margin-top: -5em;
 		width: 950px;
 	}
 }

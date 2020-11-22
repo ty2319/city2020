@@ -14,7 +14,7 @@
 				<span></span>
 				<i>menu</i>
 			</dt>
-			<dd id="live"><!--<a href="scoreboard.php">--><img src="img/common/live.gif"><!--</a>--></dd>
+			<dd id="live"><a href="https://mainichi.jp/ama-baseball/kurojishi/" target="blank"><img src="img/common/live.gif"></a></dd>
 			<dd>
 				<dl>
 					<dt>メインメニュー<i>Main menu</i></dt>
@@ -29,7 +29,7 @@
 			<dd>
 				<dl>
 					<dt>トピックス <i>Topics</i></dt>
-					<!--<dd class="scoreboard"><a href="/symbol/hp/baseball/games/2020/city/scoreboard.php"><span class="fa fa-list-ol"></span>速報スコアボード<i>Live Broadcasting</i></a></dd>-->
+					<dd class="scoreboard"><a href="/symbol/hp/baseball/games/2020/city/scoreboard.php"><span class="fa fa-list-ol"></span>速報スコアボード<i>Live Broadcasting</i></a></dd>
 					<!--<dd class="hero"><a href="/symbol/hp/baseball/games/2020/city/hero.html"><span class="fa fa-microphone"></span>ヒーローインタビュー<i>Hero Interview</i></a></dd>-->
 					<dd class="addition"><a href="/symbol/hp/baseball/games/2020/city/addition.html"><span class="fa fa-plus"></span>補強選手 2020<i>The Additional Player 2020</i></a></dd>
 					<!--<dd class="mascot"><a href="/symbol/hp/baseball/games/2020/city/mascot.html"><span class="fa fa-pencil-square-o"></span>マスコットの会場リポート<i>The mascot's game report</i></a></dd>-->
@@ -40,6 +40,7 @@
 			<dd>
 				<dl>
 					<dt>関連ページ <i>External link</i></dt>
+					<dd><a href="https://twitter.com/nttwest_symbol" target="_blank"><span class="fa fa-twitter"></span>速報twitter</a></dd>
 					<dd><a href="http://symbol.ntt-west.co.jp/nw/baseball/pitcher.php" target="_blank"><span class="fa fa-users"></span>NTT西日本硬式野球部 選手紹介</a></dd>
 					<dd><a href="https://symbol.ntt-west.co.jp/nw/sendmessage.php?tid=baseball" target="_blank"><span class="fa fa-comments"></span>応援メッセージを送る</a></dd>
 					<dd><a href="http://www.ntt-west.co.jp/symbol/mobile_mail/index.html" target="_blank" class="banner"><span class="fa fa-envelope-o"></span>速報メールマガジン ご登録</a></dd>

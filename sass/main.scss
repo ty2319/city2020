@@ -178,7 +178,7 @@ main {
 		}
 	
 		#pan {
-			@include fixB(0,0,1);
+			right 			: 0;
 			display			: none;
 			padding			: 0.5em;
 			width			: $max;
