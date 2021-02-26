@@ -40,15 +40,17 @@ $count_ini = pg_fetch_result($rs1,0,0);
 <meta name="keywords" content="NTT西日本,都市対抗,2019,シンボル,試合経過" />
 <meta name="description" content="
 第91回都市対抗野球大会での、NTT西日本の試合経過です。" />
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@nttwest_symbol" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="第91回都市対抗野球大会" />
 <meta property="og:description" content="社会人野球
 第91回都市対抗野球大会での、NTT西日本の試合経過です。" />
-<meta property="og:url" content="http://www.ntt-west.co.jp/symbol/hp/baseball/games/2020/city/" />
+<meta property="og:url" content="http://www.ntt-west.co.jp/symbol/hp/baseball/games/2020/city/scoreboard.php" />
 <meta property="og:site_name" content="第91回都市対抗野球大会" />
 <meta property="og:country-name" content="Japan,日本" />
 <meta property="og:locality" content="Osaka,大阪" />
-<meta property="og:image" content="http://www.ntt-west.co.jp/favicon.ico" />
+<meta property="og:image" content="https://www.ntt-west.co.jp/symbol/hp/baseball/games/2020/city/icon.gif" />
 <link rel="stylesheet" href="css/import.css" />
 <link rel="stylesheet" href="css/results.css" media="screen" />
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -469,7 +471,7 @@ $section_id = $section_id + 1 ;
 </main>
 <?php
   echo $string_footer;  //　置き換えたテキストを表示
-?>
-
+?> 
+<!--#include virtual="/symbol/share/twitter_code.inc"-->
 </body>
 </html>

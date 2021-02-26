@@ -1,19 +1,19 @@
 ﻿[
     {
     "class": "index",
-    "date" : "2020-10-27"
+    "date" : "2020-11-30"
   },
   {
     "class": "tournament",
-    "date" : "2020-10-27"
+    "date" : "2020-12-04"
   },
   {
     "class": "results",
-    "date" : "2020-10-02"
+    "date" : "2020-11-30"
   },
   {
     "class": "gallery",
-    "date" : "2020-10-02"
+    "date" : "2020-12-01"
   },
   {
     "class": "aid",
@@ -33,7 +33,7 @@
   },
   {
     "class": "hero",
-    "date" : "2020-10-10"
+    "date" : "2020-11-28"
   },
   {
     "class": "history",
@@ -45,6 +45,6 @@
   },
   {
     "class": "scoreboard",
-    "date" : "2020-10-02"
+    "date" : "2020-11-30"
   }
 ]

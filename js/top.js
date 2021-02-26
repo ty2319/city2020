@@ -104,7 +104,7 @@
         });
       });
 
-      $('.menu-trigger').on('click', function () {
+      $('.menu-trigger').on('touchstart click', function () {
 
         if (op == 1) {
           $('#global').nextAll().removeClass('menu_open');
@@ -133,6 +133,7 @@
               left: 0
             }, 800);
             $('#live img').fadeIn();
+            $('#global').css('z-index', 25);
           }
 
           op = 0;
@@ -159,6 +160,7 @@
               top: '4em',
               left: 0
             }, 800);
+            $('#global').css('z-index', 25);
             $('#global > dl').outerHeight($('#global > dl > dd:not(#live)').outerHeight());
 
             $('#live img').fadeOut();
@@ -261,7 +263,7 @@
     Timer = function () {
 
       $('#timer').yycountdown({
-        endDateTime: '2020/11/23 14:00:00', //カウントダウン終了日時
+        endDateTime: '2020/11/30 14:00:00', //カウントダウン終了日時
         unit: {
           d: '日 ',
           h: '時間 ',
@@ -530,6 +532,8 @@
 
   $(window).resize(function () {
     Size();
+    Random();
+    Tile();
   });
 
 })($);

@@ -14,14 +14,14 @@
 				<span></span>
 				<i>menu</i>
 			</dt>
-			<dd id="live"><a href="https://mainichi.jp/ama-baseball/kurojishi/" target="blank"><img src="img/common/live.gif"></a></dd>
+			<dd id="live"><!--<a href="https://mainichi.jp/ama-baseball/kurojishi/live/" target="blank">--><img src="img/common/live.gif"><!--</a>--></dd>
 			<dd>
 				<dl>
 					<dt>メインメニュー<i>Main menu</i></dt>
 					<dd class="index"><a href="/symbol/hp/baseball/games/2020/city/index.html"><span class="fa fa-home"></span>トップページ<i>Top Page</i></a></dd>
 					<dd class="tournament"><a href="/symbol/hp/baseball/games/2020/city/tournament.html"><span class="fa fa-sitemap"></span>トーナメント表<i>Tournament Bracket</i></a></dd>
-					<dd class="results"><!--<a href="/symbol/hp/baseball/games/2020/city/results.html">--><span class="fa fa-list-ol"></span>試合結果<i>Results</i><!--</a>--></dd>
-					<dd class="gallery"><!--<a href="/symbol/hp/baseball/games/2020/city/gallery.html">--><span class="fa fa-camera"></span>ギャラリー<i>Photo gallery</i><!--</a>--></dd>
+					<dd class="results"><a href="/symbol/hp/baseball/games/2020/city/results.html"><span class="fa fa-list-ol"></span>試合結果<i>Results</i></a></dd>
+					<dd class="gallery"><a href="/symbol/hp/baseball/games/2020/city/gallery.html"><span class="fa fa-camera"></span>ギャラリー<i>Photo gallery</i></a></dd>
 					<dd class="aid"><!--<a href="/symbol/hp/baseball/games/2020/city/aid.html">--><span class="fa fa-volume-up"></span>応援ガイド<i>Guidance of aid</i> … 球場応援禁止<!--</a>--></dd>
 					<!--<dd class="access"><a href="/symbol/hp/baseball/games/2020/city/access.html"><span class="fa fa-map-marker"></span>アクセスガイド<i>Guidance to a stadium</i> </a></dd>-->
 				</dl>
@@ -29,8 +29,8 @@
 			<dd>
 				<dl>
 					<dt>トピックス <i>Topics</i></dt>
-					<dd class="scoreboard"><a href="/symbol/hp/baseball/games/2020/city/scoreboard.php"><span class="fa fa-list-ol"></span>速報スコアボード<i>Live Broadcasting</i></a></dd>
-					<!--<dd class="hero"><a href="/symbol/hp/baseball/games/2020/city/hero.html"><span class="fa fa-microphone"></span>ヒーローインタビュー<i>Hero Interview</i></a></dd>-->
+					<!--<dd class="scoreboard"><a href="/symbol/hp/baseball/games/2020/city/scoreboard.php"><span class="fa fa-list-ol"></span>速報スコアボード<i>Live Broadcasting</i></a></dd>-->
+					<dd class="hero"><a href="/symbol/hp/baseball/games/2020/city/hero.html"><span class="fa fa-microphone"></span>ヒーローインタビュー<i>Hero Interview</i></a></dd>
 					<dd class="addition"><a href="/symbol/hp/baseball/games/2020/city/addition.html"><span class="fa fa-plus"></span>補強選手 2020<i>The Additional Player 2020</i></a></dd>
 					<!--<dd class="mascot"><a href="/symbol/hp/baseball/games/2020/city/mascot.html"><span class="fa fa-pencil-square-o"></span>マスコットの会場リポート<i>The mascot's game report</i></a></dd>-->
 					<dd class="history"><a href="/symbol/hp/baseball/games/2020/city/history.html"><span class="fa fa-trophy"></span>都市対抗とNTTグループの歴史<i>History</i></a></dd>

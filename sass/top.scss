@@ -48,6 +48,10 @@ html {
 		}
 
 		#global {
+
+			@include media($ot) {
+				z-index: 25;
+			}
 					
 			.menu-trigger {
 				@include fixT(5em,0.1%,10);

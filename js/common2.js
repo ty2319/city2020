@@ -3,8 +3,8 @@
 	//ie css
 	set = function() {
 		
-		$('#topnavi li a,footer li a,#issues a').prepend('¢ÅE');
-		$('#side li a').append(' °ÅE);
+		$('#topnavi li a,footer li a,#issues a').prepend('¢‰ ');
+		$('#side li a').append(' °¸');
 		$('.box dt').not('#issues dt').append('°ß');
 		$('.dot dd').prepend('°¶');
 		$('.box2 dt').prepend('°Ω°°').append('°°°Ω');
@@ -90,6 +90,9 @@
 			$('i' , this).text('close');
 			$('.menu-trigger .new').hide();
 			$('#global').nextAll().addClass('menu_open');
+			$('main header').stop().animate({
+			  opacity: 0
+			}, 500);
 			
 			op = 1;
 			
@@ -114,6 +117,10 @@
 					$('#global > dl > dd:not(#live)').stop().animate({top: '-205vw' , left: 0} , 800);
 					$('#live img').fadeIn();
 				}
+			
+				$('main header').stop().animate({
+				  opacity: 1
+				}, 500);
 				
 				$('.menu-trigger.on').removeClass('on');
 				$('#global').nextAll().removeClass('menu_open');
@@ -124,13 +131,16 @@
 			});
 		});
 		
-		$('.menu-trigger').on('click' , function() {
+		$('.menu-trigger').on('touchstart click' , function() {
 			
 			if (op == 1){
 				$('#global').nextAll().removeClass('menu_open');
 				$(this).removeClass('on');
 				$('.menu-trigger i').text('menu');
 				$('.menu-trigger .new').show();
+				$('main header').stop().animate({
+				  opacity: 1
+				}, 500);
 				
 				if ($(window).width() > 1500) {	
 					setTimeout(function(){
@@ -152,6 +162,9 @@
 				$(this).addClass('on');
 				$('.menu-trigger i').text('close');
 				$('.menu-trigger .new').hide();
+				$('main header').stop().animate({
+				  opacity: 0
+				}, 500);
 				
 				if ($(window).width() > 1500) {
 					$('#global > dl > dd:not(#live)').stop().animate({left: 0 , top: 0} , 500);
@@ -196,12 +209,12 @@
 			var links	= $(this);
 			var href	= links.attr('href');
 			
-			if(href.match('japan') && href.match(loc)) {
+			if(href.match('city') && href.match(loc)) {
 				$(this).addClass('active');
 			}
 		});
  
-		//JSON•’•°•§•ÅEÚºË∆¿
+		//JSON•’•°•§•Î§ÚºË∆¿
 		$.getJSON('/symbol/hp/baseball/games/2020/city/js/update.json').done(function(json, status, request) {
 			
 			var cnt = 0;
@@ -216,9 +229,9 @@
 					elem = '.index';
 				}
 		
-				if (today < ago) { // ∫£∆ÅEtoday)§¨ago(ππø∑∆ÅE+ 5∆ÅE§Ë§ÅE∞§ §ÅE
+				if (today < ago) { // ∫£∆¸(today)§¨ago(ππø∑∆¸ + 5∆¸)§Ë§Í¡∞§ §È
 					if ($.cookie('visit' + elem + '.html') == null || $.cookie('visit' + elem + '.html') < data.date) {
-						$('#global').find(elem).append('<span class="new">N</span>'); // •Ø•È•π°÷new°◊§Ú…’§±§ÅE
+						$('#global').find(elem).append('<span class="new">N</span>'); // •Ø•È•π°÷new°◊§Ú…’§±§Î
 					}
 				} else {
 					$.cookie('visit' + elem + '.html' , null);						
@@ -269,7 +282,7 @@
 		return false;
 		});
 		
-		var set =  $('header#top').height() + 1;//•¶•§•Û•…•¶æÂ…Ù§´§È§…§ÅE∞§È§§§Œ∞Ã√÷§« —≤Ω§µ§ª§ÅE´
+		var set =  $('header#top').height() + 1;//•¶•§•Û•…•¶æÂ…Ù§´§È§…§Ï§∞§È§§§Œ∞Ã√÷§« —≤Ω§µ§ª§Î§´
 		var boxTop			= new Array;
 		var current			= -1;
 		var startPosition	= 0;
@@ -280,9 +293,9 @@
 				boxTop[i] = $(this).offset().top -1;
 			});
 		});
-		//∫«ΩÈ§ŒÕ◊¡«§Àclass="on"§Ú§ƒ§±§ÅE
+		//∫«ΩÈ§ŒÕ◊¡«§Àclass="on"§Ú§ƒ§±§Î
 		changeBox(-1);
-		//•π•Ø•˙Ωº•ÅE∑§øª˛§ŒΩËÕ˝
+		//•π•Ø•Ì°º•Î§∑§øª˛§ŒΩËÕ˝
 		$(window).scroll(function(){
 			
 			var scrollPosition	= $(window).scrollTop();	
@@ -316,9 +329,9 @@
 			}
 			
 			if (scrollPosition >= $(document).height() - $(window).height() - $('footer ul').height()) {
-				$('#pan').css('position' , 'absolute');
+				$('#pan').css({'position' : 'absolute' , 'bottom' : $('footer').height()});
 			} else {
-				$('#pan').css('position' , 'fixed');
+				$('#pan').css({'position' : 'fixed' , 'bottom' : 0});
 			}
 			
 			startPosition = scrollPosition;

@@ -131,7 +131,7 @@
 			});
 		});
 		
-		$('.menu-trigger').on('click' , function() {
+		$('.menu-trigger').on('touchstart click' , function() {
 			
 			if (op == 1){
 				$('#global').nextAll().removeClass('menu_open');
